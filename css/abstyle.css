@@ -1,0 +1,160 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+	font-family: "Emblema One";
+	src: url(../font/kk.otf);
+
+}
+h1
+{
+    font-family: "Emblema One",sans-serif;
+}
+
+ul
+{
+    list-style-type: none;
+}
+body
+{
+     background-image: url(../images/20130328111757118.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+#he
+{
+    text-align: center;
+    position: relative;
+    width: 63%;
+    height: 214px;
+    margin-left:auto;
+    margin-right: auto;
+    top: 50px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+.text1
+{
+    position: absolute;
+    top:25%;
+    left: 10%;
+    color: #F0FFFF;
+}
+.text2
+{
+    position: absolute;
+    top:100px;
+    left: 70%;
+   opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+a:link{
+    text-decoration: none;
+}
+a:visited
+{
+    text-decoration:none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+nav ul li
+{
+    position: relative;
+    top: 45px;
+    left: 45%;
+    display: inline;
+    margin: 10px;
+    font-size: 20px;
+}
+nav a:link
+{
+
+    color: black;
+
+}
+nav a:visited
+{
+    color: black;
+
+}
+nav a:hover
+{
+    color: #8B8989;
+
+}
+.head
+{
+    position:absolute;
+    top: -70px;
+    left: 0%;
+}
+.sec
+{
+   font-weight: bolder;
+}
+article p
+{
+    text-indent: 2em;
+    text-align: left;
+}
+aside {
+
+    position: absolute;
+
+    font-weight: bold;
+    line-height: 2;
+    margin-left: 80%;
+    border-left-color:#8B8989 ;
+    border-left-style:dashed;
+    border-left-width: medium;
+    background-color: #FFF;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+article
+{
+    font-weight: bold;
+    background-color: #FFF;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    margin-right: 20%;
+}
+.bottom
+{
+    margin: 0px 50px;
+    background-color: #CFCFCF;
+    border-radius: 10px;
+}
+.bottom a:link
+{
+    color: black;
+
+}
+.bottom a:visited
+{
+    color:black;
+
+}
+.bottom a:hover
+{
+   font-weight: bolder;
+
+}
+article p
+{
+    font-size: 22.2px;
+
+}
+article p::first-letter
+{
+    font-size: 200%;
+    float: left
+}
+article p
+{
+    text-indent: 0em;
+}

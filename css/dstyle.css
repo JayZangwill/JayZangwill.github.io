@@ -1,0 +1,186 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.t1
+{
+
+    animation-name: move;
+    animation-duration: 3s;
+    -webit-animation-name: move;
+    -webit-animation-duration: 3s;
+}
+@keyframes move
+{
+    from{
+
+        opacity: 0;
+        filter: alpha(opacity0);
+
+    }
+    to{
+
+        opacity: 0.6;
+       filter: alpha(opacity60);
+    }}
+@-webit-keyframes move
+{
+    from{
+
+        opacity: 0;
+    }
+    to{
+
+        opacity: 1;
+    }
+}
+@font-face {
+	font-family: "Emblema One";
+	src: url(../font/kk.otf);
+
+}
+
+body
+{
+     background-image: url(../images/20130328111757118.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+ul {
+    list-style-type: none;
+}
+#he {
+    text-align: center;
+    position: relative;
+    width: 63%;
+    height: 214px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+.text1 {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    color: #F0FFFF;
+}
+
+.text2 {
+    position: absolute;
+    top: 100px;
+    left: 70%;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+nav ul li {
+    position: relative;
+    top: 45px;
+    left: 45%;
+    display: inline;
+    margin: 10px;
+    font-size: 20px;
+}
+ a:link {
+
+    text-decoration: none;
+}
+ a:visited {
+
+    text-decoration: none;
+}
+
+ a:hover {
+
+    text-decoration: none;
+}
+a:link {
+    color: black;
+    text-decoration: none;
+}
+nav a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #8B8989;
+    text-decoration: none;
+}
+.head {
+    position: absolute;
+    top: -70px;
+    left: 0%;
+}
+.sec {
+    font-weight: bolder;
+}
+.im
+{
+    float: left;
+    height: 150%;
+    margin-right: 65%;
+    position: relative;
+    border-color: black;
+    border-right-style:dotted;
+    border-right-color: #8B8989;
+    border-right-width: 3px;
+}
+.text3
+{
+
+    color: aliceblue;
+    position: absolute;
+    top: 5%;
+    left: 6%;
+}
+.text4
+{
+
+    font-weight:bold;
+    color: aliceblue;
+    position: absolute;
+    top: 35%;
+    margin-left: 10%;
+    margin-right:10%;
+}
+.artic
+{
+    font-weight: bold;
+
+    position: absolute;
+    margin-left: 35%;
+
+    width: 65%;
+    background-color: #FFF;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+.text5
+{
+    line-height: 1.5;
+    margin-left: 10%;
+    text-align: left;
+}
+.botton
+{
+
+    background-color:#B8860B;
+    padding: 5px;
+}
+figure
+{
+    float: left;
+    left: 20px;
+    width: 100px;
+    height: 138px;
+}
+.artic ul a:hover
+{
+    font-weight: bold;
+}
+h1{
+    font-family: "Emblema One",sans-serif;
+}
