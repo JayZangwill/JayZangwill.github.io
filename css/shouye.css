@@ -1,0 +1,21 @@
+body
+{
+    padding-top: 50px;
+  background-color: #EBEBEB;
+   font-family: "microsoft yahei",sans-serif;
+}
+#links
+{
+	height: 50px;
+}
+
+.artic
+{
+	margin-top: 30px;
+}
+
+.thumbnail
+{
+    box-shadow: 5px 5px 5px gray;
+}
+

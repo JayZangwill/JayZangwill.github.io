@@ -1,41 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/saystyle.css">
-    <link rel="shortcut icon" href="/images/bitbug_favicon%20(2).ico">
-    <script src="js/sayjs.js"></script>
-    <title>给我留言</title>
-</head>
-<body>
-     <nav>
-        <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="chengz.html">日益成长</a></li>
-             <li class="sec"><a href="say.html">甜言蜜语</a></li>
-            <li><a href="about.html">关于我</a></li>
-        </ul>
-    </nav>
-    <div id="he">
-    <section class="head">
-     <a href="index.html" title="微博首页"><img id="heade" src="images/logo1.png" alt="JayZangwill" width="160px" height="70px" onmousemove="mmov()" onmouseout="mmou()"></a>
-  </section>
-     <ul>
-     <li><img src="images/33.jpg" alt="JayZangwill" style="width:100%;height:214px;"></li>
-     </ul>
-           <ul class="text1">
-               <h1>JayZangwill的博客</h1>
-           </ul>
-      <section class="text2">
-          <p>路途遥远</p>
-          <p style="text-indent:2em">勿忘初心</p>
-          <p style="text-indent:4em">方得始终</p>
-      </section>
-    <div>
-        <h1 style="text-align:left">Say to me</h1>
-        <hr>
-    </div>
-           <!-- 多说评论框 start -->
+<html>
+	<head lang="zh-CN">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/say.css" />
+		<link rel="shortcut icon" href="img/touxiang.ico" />
+		<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<title>甜言蜜语</title>
+	</head>
+	<body>
+	<!--顶部导航条-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#links" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+					<a class="navbar-brand" href="shouye.html">Mr·Zangwill</a>
+				</div>
+				<div class="collapse navbar-collapse" id="links">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="shouye.html">首页 <span class="sr-only">首页</span></a></li>
+						<li><a href="chengz.html">日益成长</a></li>
+						<li class="active"><a href="say.html">甜言蜜语</a></li>
+						<li><a href="about.html">关于我</a></li>
+					</ul>
+               <div class="pull-right" id="github17">
+					<a href="https://github.com/JayZangwill" title="我的github"><img src="img/github17.png" width="50px" height="50px" alt="github"/></a>
+				</div>
+                </div>
+			</div>
+		</nav>
+		<!--头部图片-->
+		<header>
+			<img src="img/head1.jpg" alt="head">
+			<h1>路途遥远</h1>
+			<h2>勿忘初心</h2>
+			<h3>方得始终</h3>
+			<p>快来给我留言吧！</p>
+		</header>
+		<div class="container">
+			<h1>给我留言</h1>
+			<hr/>
+			<div class="row">
+				<div class="col-md-12">
+					  <!-- 多说评论框 start -->
                 <div class="ds-thread" data-thread-key="0" data-title="留言板" data-url="http://jayz.coding.io/say.html"></div>
                 <!-- 多说评论框 end -->
                 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
@@ -53,6 +72,21 @@
                     })();
                 </script>
                 <!-- 多说公共JS代码 end -->
-    </div>
-</body>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<span>张杰原创&nbsp;&nbsp;</span>
+						<a href="https://github.com/JayZangwill/JayZangwill.github.io" title="帮我点星"><img src="img/github17.png" width="50px" height="50px" alt="项目地址" />代码地址</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/shouye.min.js"></script>
+	</body>
 </html>

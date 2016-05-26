@@ -1,0 +1,87 @@
+body
+{
+	padding-top: 50px;
+	font-family: "microsoft yahei",sans-serif;
+}
+header
+{
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 7px 7px 7px;
+}
+header img
+{
+    width: 100%;
+    position: absolute;
+}
+
+header h1
+{
+    position: absolute;
+    color: #fff;
+    left: 15%;
+    top: 20%;
+    opacity: 0;
+}
+header h2
+{
+    position: absolute;
+    color: #fff;
+    left: 17%;
+    top: 35%;
+     opacity: 0;
+}
+header h3
+{
+     position: absolute;
+    color: #fff;
+    left: 20%;
+    top:50%;
+     opacity: 0;
+
+}
+header p
+{
+    position: absolute;
+    color: #fff;
+    top: 85%;
+    left: 18%;
+     opacity: 0;
+}
+.divi
+{
+	border: 1px solid gray;
+	margin: 10px auto;
+}
+footer
+{
+    background-color: #101010;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+}
+.toTop
+{
+    position: fixed;
+    height: 36px;
+    width: 36px;
+    right: 10px;
+    bottom: 10px;
+    background-image: url(../img/top.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+    transition:background-position 0.1s;
+}
+.toTop:hover
+{
+	background-position: -38px 0px;
+}
+@media (max-width: 711px)
+{
+    header img
+    {
+        width: 711px;
+    }
+}

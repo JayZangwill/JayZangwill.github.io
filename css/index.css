@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body
+{
+	height: 100%;
+	font-family: "microsoft yahei",sans-serif;
+}
+.back
+{
+	height: 100%;
+	background-size:cover;
+	background-position: 50% 50%;
+	background-image: url(../img/head1.jpg);
+	padding-top: 200px;
+	text-align: center;
+	color: #FFF;
+}
+.name
+{
+	width: 500px;
+	margin: auto;
+    margin-top: -50px;
+    opacity: 0;
+}
+.back p
+{
+	margin-top: 50px;
+	opacity: 0;
+}
+a
+{
+    color: #fff;
+    text-decoration: none;
+}
+#leader
+{
+    width: 800px;
+    height: 200px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+.circular
+{
+	height: 100%;
+	width: 25%;
+	float: left;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding-top: 80px;
+    font-size: 30px;
+
+}
+
+#blog
+{
+	background-color:#67B168;
+	transition: background-color 0.5s;
+    opacity: 0;
+}
+#blog:hover
+{
+	background-color:#3C763D;
+}
+.circular a
+{
+    padding: 40px;
+    border-radius: 35%;
+}
+#chengz
+{
+	background-color: #31B0D5;
+	transition: background-color 0.5s;
+     opacity: 0;
+    margin-left: -200px;
+}
+#chengz:hover
+{
+	background-color: #2A6496;
+}
+#say
+{
+	background-color: #CE8483;
+	transition: background-color 0.5s;
+     opacity: 0;
+    margin-left: -200px;
+}
+#say:hover
+{
+	background-color: #A94442;
+}
+#about
+{
+	background-color:#777777;
+	transition: background-color 0.5s;
+     opacity: 0;
+    margin-left: -200px;
+}
+#about:hover
+{
+	background-color: #444444;
+}
+
+@media (max-width: 800px)
+{
+    #leader
+    {
+        width: 100%;
+        overflow:visible;
+    }
+    .circular
+    {
+        width: 200px;
+        height: 200px;
+    }
+    html,body
+    {
+        width: 800px;
+    }
+    .back
+    {
+        width: 800px;
+    }
+}
+@media (max-height: 675px)
+{
+    .back
+    {
+        height: 675px;
+    }
+}
+
