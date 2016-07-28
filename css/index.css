@@ -53,13 +53,13 @@ a
 
 }
 
-#grow
+#blog
 {
 	background-color:#67B168;
 	transition: background-color 0.5s;
     opacity: 0;
 }
-#grow:hover
+#blog:hover
 {
 	background-color:#3C763D;
 }
