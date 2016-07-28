@@ -53,13 +53,13 @@ a
 
 }
 
-#blog
+#grow
 {
 	background-color:#67B168;
 	transition: background-color 0.5s;
     opacity: 0;
 }
-#blog:hover
+#grow:hover
 {
 	background-color:#3C763D;
 }
@@ -68,14 +68,14 @@ a
     padding: 40px;
     border-radius: 35%;
 }
-#chengz
+#grow
 {
 	background-color: #31B0D5;
 	transition: background-color 0.5s;
      opacity: 0;
     margin-left: -200px;
 }
-#chengz:hover
+#grow:hover
 {
 	background-color: #2A6496;
 }
