@@ -25,7 +25,7 @@ $(document).ready(function(){
 	$("#blog").delay(4000).animate({
 		opacity:"1",
 	},1000);
-	$("#chengz").delay(5000).animate({
+	$("#grow").delay(5000).animate({
 		marginLeft:"0px",
 		opacity:"1",
 	},500);
