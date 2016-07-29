@@ -8,5 +8,5 @@
 
 
 
-[个人主页链接](jayzangwill.github.io)
+[个人主页链接](http://jayzangwill.github.io/)
 
