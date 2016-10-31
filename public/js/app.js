@@ -1,28 +1,27 @@
 var home = angular.module("home", ["ui.router"]);
 home.config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/home/home");
+    $urlRouterProvider.otherwise("/home");
     $stateProvider.state("home", {
         url: "/home",
         views: {
             "": {
-                templateUrl: "tpls/navbar.html"
-            },
-            "headImg":{
-                templateUrl:"tpls/headImg.html"
-            },
-            "footer":{
-                templateUrl:"tpls/footer.html"
+                templateUrl: "tpls/homeText.html"
             }
         }
-    }).state("home.say",{
+    }).state("say",{
         url:"/say",
-        templateUrl:"tpls/say.html"
-    }).state("home.about",{
+        views:{
+            "":{
+                templateUrl:"tpls/say.html"
+            }
+        }
+    }).state("about",{
         url:"/about",
-        templateUrl:"tpls/about.html"
-    }).state("home.home",{
-        url:"/home",
-        templateUrl:"tpls/homeText.html"
+        views:{
+            "":{
+                templateUrl:"tpls/about.html"
+            }
+        }
     }).state("clear",{
         url:"/clear",
         templateUrl:"tpls/clear.html"
@@ -30,10 +29,10 @@ home.config(function ($stateProvider, $urlRouterProvider) {
         url:"/system",
         templateUrl:"tpls/system.html"
     }).state("css3-1",{
-        url:"/css3(1)",
+        url:"/css3-1",
         templateUrl:"tpls/css3(1).html"
     }).state("css3-2",{
-        url:"/css3(2)",
+        url:"/css3-2",
         templateUrl:"tpls/css3(2).html"
     })
 });
