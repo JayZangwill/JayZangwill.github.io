@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 	$("header h1").animate({
 		left:"10%",
 		opacity: "1",
@@ -20,9 +20,9 @@ $(document).ready(function(){
 	var navImg=navA.getElementsByTagName("img")[0];
 	navA.onmouseenter=function()
 	{
-		navImg.src="img/github18.png";
+		navImg.src="public/img/github18.png";
 	}
 	navA.onmouseleave=function(){
-		navImg.src="img/github17.png";
+		navImg.src="public/img/github17.png";
 	}
 });

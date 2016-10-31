@@ -1,118 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" ng-app="home">
 
-<head lang="zh-CN">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="public/css/bootstrap.css">
+    <title>Mr·Zangwill</title>
+    <link rel="shortcut icon" href="public/img/touxiang.ico">
+    <link rel="stylesheet" href="libs/css/bootstrap.css">
     <link rel="stylesheet" href="public/css/common.css">
     <link rel="stylesheet" href="public/css/home.css">
-    <link rel="shortcut icon" href="public/img/touxiang.ico">
     <!--[if lt IE 9]>
       <script src="libs/js/respond.min.js"></script>
       <script src="libs/js/html5shiv.js"></script>
     <![endif]-->
-    <title>Zangwill的个人主页</title>
 </head>
-<!--顶部导航条-->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#links" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="home.html">Mr·Zangwill</a>
-        </div>
-        <div class="collapse navbar-collapse" id="links">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="home.html">首页 <span class="sr-only">首页</span></a></li>
-                <li><a href="grow.html">日益成长</a></li>
-                <li><a href="say.html">甜言蜜语</a></li>
-                <li><a href="about.html">关于我</a></li>
-            </ul>
-            <div class="pull-right" id="github17">
-                <a href="https://github.com/JayZangwill" title="我的github"><img src="public/img/github17.png" width="50px" height="50px" alt="github" /></a>
-            </div>
-        </div>
-    </div>
-</nav>
-<!--头部图片-->
-<header>
-    <img src="public/img/head1.jpg" alt="head">
-    <h1>路途遥远</h1>
-    <h2>勿忘初心</h2>
-    <h3>方得始终</h3>
-    <p>欢迎来到Zangwill联盟</p>
-</header>
-<div class="container artic">
-    <h1>技术小文章</h1>
-    <div class="divi"></div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="thumbnail">
-                <img src="public/img/apic883_s.jpg" alt="清理">
-                <div class="caption">
-                    <h3 class="text-center">垃圾清理</h3>
-                    <p>你的电脑是不是感觉很卡？感觉电脑里有很多垃圾用360、管家清理总是几十G。如果是，那么Mr·Zangwill的这篇文章将教你怎么使用电脑自带的工具清理电脑。
-                        <p class="text-center"><a href="clear.html" class="btn btn-primary" role="button">阅读全文</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="thumbnail">
-                <img src="public/img/windows.jpg" alt="windows">
-                <div class="caption">
-                    <h3 class="text-center">带你装系统</h3>
-                    <p>想要学装系统的骚年们，你们的福利来了，这篇文章将会教你如何装系统，一步一步手把手地教你哟！</p>
-                    <p class="text-center"><a href="system.html" class="btn btn-primary" role="button">阅读全文</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="thumbnail">
-                <img src="public/img/css3.png" alt="windows">
-                <div class="caption">
-                    <h3 class="text-center">学习css3(1)</h3>
-                    <p>自从css3问世以后，以前很多只能用js写的特效现在用几行简简单单的css代码就能搞定了，让我们一起来探索css3的世界吧</p>
-                    <p class="text-center"><a href="css3(1).html" class="btn btn-primary" role="button">阅读全文</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="thumbnail">
-                <img src="public/img/css3.png" alt="windows">
-                <div class="caption">
-                    <h3 class="text-center">学习css3(2)</h3>
-                    <p>这次我们来研究研究如何用css实现3d翻转的效果</p>
-                    <br>
-                    <p class="text-center"><a href="css3(2).html" class="btn btn-primary" role="button">阅读全文</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="toTop"></div>
-<!--底部-->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <span>张杰原创&nbsp;&nbsp;</span>
-                <a href="https://github.com/JayZangwill/JayZangwill.github.io" title="帮我点星"><img src="public/img/github17.png" width="50px" height="50px" alt="项目地址" />代码地址</a>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/home.min.js"></script>
-<script src="js/article.js"></script>
+
+<body>
+    <div ui-view="headImg"></div>
+    <div ui-view></div>
+    <div ui-view="footer"></div>
+    <script src="libs/js/jquery.min.js"></script>
+    <script src="libs/js/angular.js"></script>
+    <script src="libs/js/angular-ui-router.js"></script>
+    <script src="libs/js/bootstrap.min.js"></script>
+    <script src="public/js/app.js"></script>
 </body>
 
 </html>
