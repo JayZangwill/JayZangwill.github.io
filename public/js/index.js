@@ -134,3 +134,11 @@ $(function () {
         }
     });
 });
+
+document.onreadystatechange = completeLoading;
+
+function completeLoading() {
+    if (document.readyState == "complete") {
+        alert("sss");
+    }
+}
