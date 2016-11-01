@@ -1,4 +1,20 @@
+$(document).on("readystatechange", completeLoading);
 $(function () {
+    var $canvas = $('<canvas id="canvas" width="300" height="300"></canvas>'),
+        $soundPlay = $('<a href="javascript:;" title="音乐暂停"><i class="iconfont music-disable">&#xe638;</i></a>'),
+        $audio=$('<audio id="bgSound" src="hp.ogg" loop autoplay><source src="hp.ogg" type="audio/ogg"></audio>'),
+        $soundPause = $('<a href="javascript:;" title="音乐播放"><i class="iconfont music">&#xe612;</i></a>'),
+        $viedo=$('<video src="home.mp4" loop autoplay><source src="home.mp4" type="video/mp4"></video>'),
+        $name=$('<h1>Jay Zangwill</h1>'),
+        $home=$('<li><a href="home.html" title="进入主页">my home</a></li>'),
+        $blog=$('<li><a href="https://github.com/JayZangwill/blog" title="我的博客">my blog</a></li>'),
+        $github=$('<li><a href="https://github.com/JayZangwill" title="github">my github</a></li>');
+    $(".canvas-wrap").append($canvas);
+    $(".sound-switch").append($soundPlay).append($soundPause);
+    $(".links").append($home).append($blog).append($github);
+    $(".name-wrap").append($name);
+    $(".video").append($viedo);
+    $(".audio").append($audio);
     var canvas = document.getElementById("canvas"),
         context = canvas.getContext("2d"),
         height = 10 * Math.sin(Math.PI / 3), //等边三角的高,14是边长
@@ -135,10 +151,8 @@ $(function () {
     });
 });
 
-document.onreadystatechange = completeLoading;
-
 function completeLoading() {
-    if (document.readyState == "complete") {
-        alert("sss");
+    if (document.readyState === "complete") {
+        $("#loading").remove();
     }
 }

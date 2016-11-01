@@ -21,7 +21,7 @@ div,
 video,
 img,
 canvas,
-a,
+a,p,
 ui,
 li {
     padding: 0;
@@ -50,7 +50,17 @@ li {
 img {
     border: 0;
 }
-
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	width: 200px;
+    height: 230px;
+    margin-top: -115px;
+    margin-left: -100px;
+    text-align: center;
+    background-color: #fff;
+}
 .canvas-wrap {
     width: 300px;
     margin: auto;
