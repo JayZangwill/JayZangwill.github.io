@@ -34,5 +34,5 @@ home.config(function ($stateProvider, $urlRouterProvider) {
     }).state("css3-2",{
         url:"/css3-2",
         templateUrl:"tpls/css3(2).html"
-    })
+    });
 });

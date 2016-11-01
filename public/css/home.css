@@ -1,5 +1,6 @@
 body {
     padding-top: 50px;
+    min-width: 320px;
     background-color: #EBEBEB;
     font-family: "microsoft yahei", sans-serif;
 }

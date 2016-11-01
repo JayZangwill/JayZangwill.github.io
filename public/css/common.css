@@ -56,10 +56,13 @@ header p
 }
 footer
 {
-    background-color: #101010;
+    background-color: #883f17;
     text-align: center;
     color: #fff;
     padding: 10px 0;
+}
+footer a:link,footer:visited,footer:hover{
+    color: #fff;
 }
 .toTop
 {

@@ -40,7 +40,7 @@ function completeLoading() {
                 //刻度
                 for (var i = 0; i < 360; i++) {
                     context.save();
-                    context.strokeStyle = "#d9b300";
+                    context.strokeStyle = "#b4531e";
                     context.beginPath();
                     context.translate(150, 150);
                     context.rotate(i * Math.PI / 180);
@@ -76,7 +76,6 @@ function completeLoading() {
                 context.restore();
                 //秒针
                 context.save();
-                context.strokeStyle = "#ffffaa";
                 context.fillStyle = "#f9f937";
                 context.beginPath();
                 context.translate(150, 150);
@@ -103,7 +102,7 @@ function completeLoading() {
                 context.closePath();
 
                 context.save();
-                context.fillStyle = "#e1e100";
+                context.fillStyle = "#b4531e";
                 context.beginPath();
                 context.arc(150, 150, 7, 0, 2 * Math.PI);
                 context.fill();

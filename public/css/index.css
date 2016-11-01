@@ -33,6 +33,7 @@ body {
     height: 100%;
     font-family: arial, "microsoft yahei", sans-serif;
     min-width: 320px;
+    overflow: hidden;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -105,7 +106,7 @@ video {
 }
 
 .links a:hover {
-    color: aqua;
+    color: #b4531e;
     text-decoration: underline;
 }
 
@@ -130,5 +131,5 @@ video {
     z-index: -2;
 }
 .sound-switch .music:hover,.sound-switch .music-disable:hover{
-    color: gold;
+    color: #b4531e;
 }
