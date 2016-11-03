@@ -15,14 +15,4 @@ $(function(){
 		top:"70%",
 		 opacity: "1",
 	},500);
-	var navGit=document.getElementById("github17");
-	var navA=navGit.getElementsByTagName("a")[0];
-	var navImg=navA.getElementsByTagName("img")[0];
-	navA.onmouseenter=function()
-	{
-		navImg.src="public/img/github18.png";
-	}
-	navA.onmouseleave=function(){
-		navImg.src="public/img/github17.png";
-	}
 });
