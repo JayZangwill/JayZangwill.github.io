@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Mr·Zangwill</title>
-
-    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/91608/46931/58148752f629d8107cfe8864.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="public/css/index.css">
-    <link rel="shortcut icon" href="public/img/touxiang.ico">
-    <!--[if lt IE 9]>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Mr·Zangwill</title>
+		<link href='http://cdn.webfont.youziku.com/webfonts/nomal/91608/46931/58148752f629d8107cfe8864.css' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="public/css/index.css">
+		<link rel="shortcut icon" href="public/img/touxiang.ico">
+		<bgsound src="hp.ogg" autostart="true" loop="infinite">
+			<!--[if lt IE 9]>   
+    	<link rel="stylesheet" href="public/css/forie.css">  	
       <script src="libs/js/respond.min.js"></script>
       <script src="libs/js/html5shiv.js"></script>
     <![endif]-->
-</head>
+	</head>
 
-<body>
-    <div id="loading" class="loading">
-        <img src="public/img/loading.gif" alt="loading">
-        <p>加载中......</p>
-    </div>
-    <div class="video"></div>
-    <div class="audio"></div>
-    <div class="sound-switch"></div>
-    <div class="canvas-wrap"></div>
-    <div class="name-wrap"></div>
-    <div class="links">
-        <ul></ul>
-    </div>
-    <script src="libs/js/jquery.min.js"></script>
-    <script src="public/js/index.js"></script>
-</body>
+	<body>
+		<div id="loading" class="loading">
+			<img src="public/img/loading.gif" alt="loading">
+			<p>加载中......</p>
+		</div>
+		<div class="hack">您的浏览器版本太低，请下载新的浏览器</div>
+		<div class="video"></div>
+		<div id="audio" class="audio">
+		</div>
+		<div class="bg-img"></div>
+		<div class="sound-switch"></div>
+		<div class="canvas-wrap"></div>
+		<div class="name-wrap"></div>
+		<div class="links">
+			<ul></ul>
+		</div>
+		<script src="libs/js/jquery.min.js"></script>
+		<script src="public/js/index.js"></script>
+		<script src="libs/js/audio.min.js"></script>
+	</body>
 
 </html>

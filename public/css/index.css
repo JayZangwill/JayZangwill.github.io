@@ -67,7 +67,7 @@ img {
     margin: auto;
 }
 
-video {
+video,.bg-img {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -76,6 +76,20 @@ video {
     width: auto;
     height: auto;
     z-index: -100;
+}
+.bg-img {
+		position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+		z-index: -200;
+}
+.bg-img img{
+	min-width: 100%;
+	min-height: 100%;
 }
 
 .name-wrap,
@@ -115,9 +129,10 @@ video {
 }
 .sound-switch {
     width: 30px;
-	position: relative;
+		position: relative;
     top: 10px;
     right: -90%;
+    display: none \9;
 }
 .sound-switch .music,.sound-switch .music-disable {
     position: absolute;
@@ -125,6 +140,9 @@ video {
 	font-size: 30px;
     color: #fff;
     transition: all 0.5s ease-in-out;
+}
+.hack{
+	display: none;
 }
 .sound-switch .music{
 	opacity: 0;
