@@ -12,7 +12,7 @@ function completeLoading() {
 				$bgImg=$('<img src="public/img/home.png" alt="主页图片">'),
 				$soundPlay = $('<a href="javascript:;" title="音乐暂停"><i class="iconfont music-disable">&#xe638;</i></a>'),
 				$soundPause = $('<a href="javascript:;" title="音乐播放"><i class="iconfont music">&#xe612;</i></a>'),
-				$viedo = $('<video src="home.mp4" loop autoplay><source src="home.mp4" type="video/mp4"></video>');
+				$viedo = $('<video loop autoplay><source src="home.mp4" type="video/mp4"></video>');
 				$name = $('<h1>Jay Zangwill</h1>'),
 				$home = $('<li><a href="home.html" title="进入主页">my home</a></li>'),
 				$blog = $('<li><a href="https://github.com/JayZangwill/blog" title="我的博客">my blog</a></li>'),

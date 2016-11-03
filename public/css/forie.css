@@ -1,10 +1,12 @@
-.hack{
+.hack {
 	display: block;
 	text-align: center;
 	margin-top: 300px;
 	font-size: 30px;
 	color: #FFF;
 }
-.name-wrap,.links{
+
+.name-wrap,
+.links {
 	display: none;
 }

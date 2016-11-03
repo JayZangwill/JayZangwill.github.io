@@ -1,18 +1,16 @@
 @font-face {
-  font-family: 'iconfont';
-  src: url('font/iconfont.eot');
-  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),
-  url('font/iconfont.woff') format('woff'),
-  url('font/iconfont.ttf') format('truetype'),
-  url('font/iconfont.svg#iconfont') format('svg');
+	font-family: 'iconfont';
+	src: url('font/iconfont.eot');
+	src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), url('font/iconfont.woff') format('woff'), url('font/iconfont.ttf') format('truetype'), url('font/iconfont.svg#iconfont') format('svg');
 }
 
-.iconfont{
-  font-family:"iconfont" !important;
-  font-size:16px;font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 html,
@@ -21,132 +19,149 @@ div,
 video,
 img,
 canvas,
-a,p,
+a,
+p,
 ui,
 li {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 html,
 body {
-    height: 100%;
-    font-family: arial, "microsoft yahei", sans-serif;
-    min-width: 320px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	height: 100%;
+	font-family: arial, "microsoft yahei", sans-serif;
+	min-width: 320px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 li {
-    list-style: none;
+	list-style: none;
 }
 
 img {
-    border: 0;
-}
-.loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-	width: 200px;
-    height: 230px;
-    margin-top: -115px;
-    margin-left: -100px;
-    text-align: center;
-    background-color: #fff;
-}
-.canvas-wrap {
-    width: 300px;
-    margin: auto;
+	border: 0;
 }
 
-video,.bg-img {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 230px;
+	margin-top: -115px;
+	margin-left: -100px;
+	text-align: center;
+	background-color: #fff;
 }
+
+.canvas-wrap {
+	width: 300px;
+	margin: auto;
+}
+
+video,
 .bg-img {
-		position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-		z-index: -200;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
 }
-.bg-img img{
+
+video{
+	object-fit: cover;
+}
+
+.bg-img {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -200;
+}
+
+.bg-img img {
 	min-width: 100%;
 	min-height: 100%;
 }
 
 .name-wrap,
 .links {
-    width: 320px;
-    margin: 0 auto;
-    text-align: center;
+	width: 320px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .links a {
-    font-family: 'SnellRoundhand6b559e215165d8';
-    font-size: 30px;
-    padding: 5px 25px;
+	font-family: 'SnellRoundhand6b559e215165d8';
+	font-size: 30px;
+	padding: 5px 25px;
 }
 
 .name-wrap h1 {
-    font-family: 'SnellRoundhand6b559e215165d8';
-    font-size: 40px;
-    color: #fff;
+	font-family: 'SnellRoundhand6b559e215165d8';
+	font-size: 40px;
+	color: #fff;
 }
 
 .links a:link {
-    color: #fff;
+	color: #fff;
 }
 
 .links a:visited {
-    color: #fff;
+	color: #fff;
 }
 
 .links a:hover {
-    color: #b4531e;
-    text-decoration: underline;
+	color: #b4531e;
+	text-decoration: underline;
 }
 
 .links li {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
+
 .sound-switch {
-    width: 30px;
-		position: relative;
-    top: 10px;
-    right: -90%;
-    display: none \9;
+	width: 30px;
+	position: relative;
+	top: 10px;
+	right: -90%;
+	display: none \9;
 }
-.sound-switch .music,.sound-switch .music-disable {
-    position: absolute;
-    display: block;
+
+.sound-switch .music,
+.sound-switch .music-disable {
+	position: absolute;
+	display: block;
 	font-size: 30px;
-    color: #fff;
-    transition: all 0.5s ease-in-out;
+	color: #fff;
+	transition: all 0.5s ease-in-out;
 }
-.hack{
+
+.hack {
 	display: none;
 }
-.sound-switch .music{
+
+.sound-switch .music {
 	opacity: 0;
-    z-index: -2;
+	z-index: -2;
 }
-.sound-switch .music:hover,.sound-switch .music-disable:hover{
-    color: #b4531e;
+
+.sound-switch .music:hover,
+.sound-switch .music-disable:hover {
+	color: #b4531e;
 }
