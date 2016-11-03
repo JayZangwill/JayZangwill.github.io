@@ -5,14 +5,14 @@ function completeLoading() {
 	if(document.readyState === "complete") {
 		$("#loading").remove();
 		var bufferSource,
-			aContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
+			aContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext,
+			pc = isPC();
 		getSound();
 		$(function() {
 			var $canvas = $('<canvas id="canvas" width="300" height="300"></canvas>'),
-				$bgImg=$('<img src="public/img/home.png" alt="主页图片">'),
+				$bgImg = $('<img src="public/img/home.png" alt="主页图片">'),
 				$soundPlay = $('<a href="javascript:;" title="音乐暂停"><i class="iconfont music-disable">&#xe638;</i></a>'),
 				$soundPause = $('<a href="javascript:;" title="音乐播放"><i class="iconfont music">&#xe612;</i></a>'),
-				$viedo = $('<video loop autoplay><source src="home.mp4" type="video/mp4"></video>');
 				$name = $('<h1>Jay Zangwill</h1>'),
 				$home = $('<li><a href="home.html" title="进入主页">my home</a></li>'),
 				$blog = $('<li><a href="https://github.com/JayZangwill/blog" title="我的博客">my blog</a></li>'),
@@ -22,7 +22,10 @@ function completeLoading() {
 			$(".sound-switch").append($soundPlay).append($soundPause);
 			$(".links").append($home).append($blog).append($github);
 			$(".name-wrap").append($name);
-			$(".video").append($viedo);
+			if(pc) {
+				var $viedo = $('<video loop autoplay><source src="home.mp4" type="video/mp4"></video>');
+				$(".video").append($viedo);
+			}
 			//canvas部分
 			if(document.getElementById("canvas").getContext) {
 				var canvas = document.getElementById("canvas"),
@@ -191,4 +194,20 @@ function completeLoading() {
 			}
 		}
 	}
+}
+
+function isPC() {
+	var userAgentInfo = navigator.userAgent; /*返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)*/
+	var Agents = ["Android", "iPhone",
+		"SymbianOS", "Windows Phone",
+		"iPad", "iPod"
+	];
+	var flag = 1;
+	for(var v = 0; v < Agents.length; v++) {
+		if(userAgentInfo.indexOf(Agents[v]) > 0) { /*如果返回的信息里有上面的字符串*/
+			flag = 0;
+			break;
+		}
+	}
+	return flag;
 }
