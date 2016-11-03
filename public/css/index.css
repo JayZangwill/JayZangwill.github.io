@@ -84,13 +84,6 @@ video{
 }
 
 .bg-img {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
 	z-index: -200;
 }
 
@@ -128,7 +121,6 @@ video{
 
 .links a:hover {
 	color: #b4531e;
-	text-decoration: underline;
 }
 
 .links li {
