@@ -8,7 +8,6 @@ function completeLoading() {
 			aContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 		getSound();
 		$(function() {
-			var as = audiojs.createAll();
 			var $canvas = $('<canvas id="canvas" width="300" height="300"></canvas>'),
 				$bgImg=$('<img src="public/img/home.png" alt="主页图片">'),
 				$soundPlay = $('<a href="javascript:;" title="音乐暂停"><i class="iconfont music-disable">&#xe638;</i></a>'),
