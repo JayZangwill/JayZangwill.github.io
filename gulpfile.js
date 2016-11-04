@@ -23,8 +23,8 @@ gulp.task('styles', function () {
 });
 // Scripts
 gulp.task('scripts', function () {
-    return gulp.src('public/js/**/!(app)*')
-        .pipe(concat('main.js'))
+    return gulp.src('public/js/**/!(_)*')
+        .pipe(concat('home.js'))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -34,9 +34,22 @@ gulp.task('scripts', function () {
             message: 'Scripts task complete'
         }));
 });
-//min angular scripts
+//uglify index scripts
+gulp.task('index', function () {
+    return gulp.src('public/js/_index.js')
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'))
+        .pipe(notify({
+            message: 'Scripts task complete'
+        }));
+});
+
+//uglify app scripts
 gulp.task('app', function () {
-    return gulp.src('public/js/app.js')
+    return gulp.src('public/js/_app.js')
         .pipe(rename({
             suffix: '.min'
         }))
@@ -68,7 +81,7 @@ gulp.task('clean', function (cb) {
 });
 // Default task 设置默认任务
 gulp.task('default',function () {
-    gulp.start('styles', 'scripts','app');
+    gulp.start('styles', 'scripts','index','app');
 });
 gulp.task('img',function () {
     gulp.start('images');
