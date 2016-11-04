@@ -170,7 +170,6 @@ function completeLoading() {
 				}
 			});
 		});
-
 		function getSound() {
 			var xmlhttp = new XMLHttpRequest();
 			if(aContext) {
@@ -188,6 +187,7 @@ function completeLoading() {
 					bufferSource.loop = true;
 					bufferSource.connect(aContext.destination);
 					bufferSource[bufferSource.start ? "start" : "noteOn"](0);
+					alert("s");
 				}, function(err) {
 					alert(err);
 				});
