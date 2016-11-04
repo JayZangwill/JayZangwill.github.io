@@ -27,7 +27,7 @@ function completeLoading() {
 				$(".video").append($viedo);
 			}
 			//canvas部分
-			if(document.getElementById("canvas").getContext) {
+			if(document.getElementById("canvas")&&document.getElementById("canvas").getContext) {
 				var canvas = document.getElementById("canvas"),
 					context = canvas.getContext("2d"),
 					height = 10 * Math.sin(Math.PI / 3), //等边三角的高,14是边长
