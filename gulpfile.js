@@ -23,7 +23,7 @@ gulp.task('styles', function () {
 });
 // Scripts
 gulp.task('scripts', function () {
-    return gulp.src('public/js/**/!(_)*')
+    return gulp.src('public/js/**/!(my)*')
         .pipe(concat('home.js'))
         .pipe(rename({
             suffix: '.min'
@@ -36,7 +36,7 @@ gulp.task('scripts', function () {
 });
 //uglify index scripts
 gulp.task('index', function () {
-    return gulp.src('public/js/_index.js')
+    return gulp.src('public/js/myindex.js')
         .pipe(rename({
             suffix: '.min'
         }))
@@ -49,7 +49,7 @@ gulp.task('index', function () {
 
 //uglify app scripts
 gulp.task('app', function () {
-    return gulp.src('public/js/_app.js')
+    return gulp.src('public/js/myapp.js')
         .pipe(rename({
             suffix: '.min'
         }))
@@ -78,6 +78,10 @@ gulp.task('images', function () {
 // Clean 任务执行前，先清除之前生成的文件
 gulp.task('clean', function (cb) {
     del(['dist/'], cb)
+});
+//push到远程仓库前把node_modules文件夹删除
+gulp.task('push', function (cb) {
+    del(['node_modules/'], cb)
 });
 // Default task 设置默认任务
 gulp.task('default',function () {
