@@ -13,7 +13,7 @@ function completeLoading() {
 				$soundPause = $('<a href="javascript:;" title="音乐播放"><i class="iconfont music">&#xe612;</i></a>'),
 				$name = $('<h1>Jay Zangwill</h1>'),
 				$home = $('<li><a href="home.html" title="进入主页">my home</a></li>'),
-				$blog = $('<li><a href="https://github.com/JayZangwill/blog" title="我的博客">my blog</a></li>'),
+				$blog = $('<li><a href="https://JayZangwill.github.io/blog" title="我的博客">my blog</a></li>'),
 				$github = $('<li><a href="https://github.com/JayZangwill" title="github">my github</a></li>');
 			if(pc) { //如果是移动端就不请求音乐
 				getSound();
