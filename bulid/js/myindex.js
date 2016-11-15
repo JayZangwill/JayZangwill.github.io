@@ -15,7 +15,7 @@ function completeLoading() {
                 aContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext,
                 pc = isPC(),
                 $canvas = $('<canvas id="canvas" width="300" height="300"></canvas>'),
-                $bgImg = $('<img src="public/img/home.png" alt="主页图片">'),
+                $bgImg = $('<img src="bulid/img/home.png" alt="主页图片">'),
                 $soundPlay = $('<a href="javascript:;" title="音乐暂停"><i class="iconfont music-disable">&#xe638;</i></a>'),
                 $soundPause = $('<a href="javascript:;" title="音乐播放"><i class="iconfont music">&#xe612;</i></a>'),
                 $name = $('<h1>Jay Zangwill</h1>'),
