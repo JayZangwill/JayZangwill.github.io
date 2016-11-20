@@ -2,7 +2,7 @@
 
 [个人主页链接](http://jayzangwill.github.io/)
 
-1. 个人主页的第三次大更新，引入了angular框架，主要用了*ui-router*。
+1. 个人主页的第三次大更新，引入了angular框架，主要用了*ui-router*。:tada:
 
 2. 整体看上来angular核心的东西没怎么用到...额...这个以后再慢慢加！
 
