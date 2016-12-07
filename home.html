@@ -1,74 +1,80 @@
 <!DOCTYPE html>
 <html lang="zh-CN" ng-app="home">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Mr·Zangwill</title>
-    <link rel="shortcut icon" href="bulid/img/touxiang.ico">
-    <link rel="stylesheet" href="libs/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bulid/css/common.css">
-    <link rel="stylesheet" href="bulid/css/home.css">
-    <!--[if lt IE 9]>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Mr·Zangwill</title>
+		<link rel="shortcut icon" href="bulid/img/touxiang.ico">
+		<link rel="stylesheet" href="libs/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bulid/css/common.css">
+		<link rel="stylesheet" href="bulid/css/home.css">
+		<!--[if lt IE 9]>
       <script src="libs/js/respond.min.js"></script>
       <script src="libs/js/html5shiv.js"></script>
     <![endif]-->
-</head>
+	</head>
 
-<body>
-    <!--导航条-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#links" aria-expanded="false">
+	<body>
+		<!--导航条-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#links" aria-expanded="false">
                     <span class="sr-only">Mr·Zangwill</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" ui-sref=".home">Mr·Zangwill</a>
-            </div>
-            <div class="collapse navbar-collapse" id="links">
-                <ul class="nav navbar-nav">
-                    <li ui-sref-active="active"><a ui-sref="home">首页 <span class="sr-only">首页</span></a></li>
-                    <li ui-sref-active="active"><a ui-sref="say">甜言蜜语</a></li>
-                    <li ui-sref-active="active"><a ui-sref="about">关于我</a></li>
-                </ul>
-                <div class="pull-right" id="github17">
-                    <a id="githubLink" href="https://github.com/JayZangwill" title="我的github"><i class="iconfont">&#xe735;</i></a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!--/导航条-->
-    <!--头部图片-->
-    <header>
-        <img src="bulid/img/home.png" alt="head">
-        <h1>路途遥远</h1>
-        <h2>勿忘初心</h2>
-        <h3>方得始终</h3>
-        <p>欢迎来到Zangwill联盟</p>
-    </header>
-    <!--/头部图片-->
-    <div ui-view></div>
-    <!--页脚-->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <span>张杰原创&nbsp;&nbsp;</span>
-                    <a href="https://github.com/JayZangwill/JayZangwill.github.io" title="帮我点星"><i class="iconfont">&#xe735;</i>代码地址</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="libs/js/jquery.min.js"></script>
-    <script src="libs/js/angular.min.js"></script>
-    <script src="libs/js/angular-ui-router.min.js"></script>
-    <script src="libs/js/bootstrap.min.js"></script>
-    <script src="dest/js/main.min.js"></script>
-    <script src="dest/js/myapp.min.js"></script>
-</body>
+					<a class="navbar-brand" ui-sref=".home">Mr·Zangwill</a>
+				</div>
+				<div class="collapse navbar-collapse" id="links">
+					<ul class="nav navbar-nav">
+						<li ui-sref-active="active">
+							<a ui-sref="home">首页 <span class="sr-only">首页</span></a>
+						</li>
+						<li ui-sref-active="active">
+							<a ui-sref="say">甜言蜜语</a>
+						</li>
+						<li ui-sref-active="active">
+							<a ui-sref="about">关于我</a>
+						</li>
+					</ul>
+					<div class="pull-right" id="github17">
+						<a id="githubLink" href="https://github.com/JayZangwill" title="我的github"><i class="iconfont">&#xe735;</i></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--/导航条-->
+		<!--头部图片-->
+		<header>
+			<img src="bulid/img/home.png" alt="head">
+			<h1>路途遥远</h1>
+			<h2>勿忘初心</h2>
+			<h3>方得始终</h3>
+			<p>欢迎来到Zangwill联盟</p>
+		</header>
+		<!--/头部图片-->
+		<div ui-view></div>
+		<!--页脚-->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<a href="http://www.miitbeian.gov.cn">桂ICP备16009800号&nbsp;&nbsp;&nbsp;</a>
+						<a href="https://github.com/JayZangwill/JayZangwill.github.io" title="帮我点星"><i class="iconfont">&#xe735;</i>代码地址</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="libs/js/jquery.min.js"></script>
+		<script src="libs/js/angular.min.js"></script>
+		<script src="libs/js/angular-ui-router.min.js"></script>
+		<script src="libs/js/bootstrap.min.js"></script>
+		<script src="dest/js/main.min.js"></script>
+		<script src="dest/js/myapp.min.js"></script>
+	</body>
 
 </html>
