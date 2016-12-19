@@ -1,6 +1,9 @@
 #这是我的个人主页
 
-[个人主页链接](http://jayzangwill.github.io/)
+[个人主页github链接](http://jayzangwill.github.io/)
+[个人主页服务器连接](http://www.jayzangwill.cn/)
+
+虽然主页丢到服务器上了，但是还没有连接数据库，还属于静态网页，等再修炼几天，做一个真真正正的动态博客。
 
 1. 个人主页的第三次大更新，引入了angular框架，主要用了*ui-router*。:tada:
 
