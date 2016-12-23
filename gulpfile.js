@@ -27,9 +27,7 @@ gulp.task('usemin', function() {
 	return gulp.src(['index.html', 'home.html'])
 		.pipe(usemin({
 			html: [],
-			js: [],
-			js1: [],
-			js2: []
+			js: []
 		}))
 		.pipe(gulp.dest('./'));
 });
