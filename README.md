@@ -2,11 +2,10 @@
 
 [个人主页服务器连接](http://www.jayzangwill.cn/)
 
-    //运行
-    npm run dev
-    
-    //打包
-    npm run build
+     //运行
+     npm run dev
+     //打包
+     npm run build
     
 1. 个人主页的第四次大更新，用vue-cli搭建的。:tada:
 
