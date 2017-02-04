@@ -1,6 +1,6 @@
 #这是我的个人主页
 
-[个人主页服务器连接](http://www.jayzangwill.cn/)
+[在线地址](http://www.jayzangwill.cn/)
 
      //运行 npm run dev
      //打包 npm run build
