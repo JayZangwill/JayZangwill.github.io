@@ -34,6 +34,7 @@
 	
 	.describe {
 		color: #fff;
+		margin-bottom: 25px;
 		li {
 			list-style-type: circle;
 			a {

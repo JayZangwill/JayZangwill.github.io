@@ -1,5 +1,8 @@
 <template>
 	<div id="app" v-if="noLowIe">
+		<div class="menu">
+			<a href="/" title="返回主页"><i class="iconfont pull-right">&#xe60a;</i></a>
+		</div>
 		<div class="container col-md-8 my-container">
 			<nav-bar></nav-bar>
 			<router-view></router-view>
@@ -37,10 +40,15 @@
 	@import url("../../common/css/common.css");
 	@import url("http://cdn.webfont.youziku.com/webfonts/nomal/91608/46931/58148752f629d8107cfe8864.css");
 	$hundred:100;
-	#app {
-		padding-top: $hundred*1px;
+	.menu{
+		overflow: hidden;
+		padding: 15px 0;
+		i{
+			color:#fff;
+			font-size: 30px;
+			margin-right: 5%;
+		}
 	}
-	
 	.loading {
 		position: absolute;
 		width: $hundred*1%;
