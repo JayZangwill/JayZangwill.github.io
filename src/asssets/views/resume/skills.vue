@@ -10,14 +10,14 @@
 			<div class="col-md-12 describe">
 				<h3>补充</h3>
 				<ol>
-					<li>曾阅读过jQuery的部分源码，能自己<strong>独立写出</strong>jQuery的一些常用功能</li>
+					<li>曾阅读过jQuery的部分源码，能自己<strong>独立封装出</strong>jQuery的一些常用功能</li>
 					<li>注重代码的规范性，和浏览器及手机端的兼容</li>
 					<li>能够熟练使用git&github进行团队合作</li>
 					<li>比较注重代码的<strong>整洁和复用性</strong>，追求<strong>高性能且简洁的代码</strong></li>
 					<li>了解node和mongodb并且独立设计出一套基于node和mongodb的系统</li>
 					<li>关注新技术，熟悉es6，并且有一颗勇于探索未知的心</li>
 					<li>追求完美，代码出现bug会想各种办法解决</li>
-					<li>有较强的学习能力(具体可以看<router-link active-class="actived" to="/experience">这里</router-link>)做事认真，性格开朗</li>
+					<li>有较强的学习能力做事认真，性格开朗</li>
 				</ol>
 			</div>
 		</div>
