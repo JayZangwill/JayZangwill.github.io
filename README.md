@@ -7,9 +7,11 @@
     
 1. 个人主页的第四次大更新，用vue-cli搭建的，支持scss，es6。:tada:
 
-3. 主页不支持ie9一下浏览器。
+3. 主页不支持ie9以下浏览器。
 
-4. 欢迎点星星，就是右上角那个。
+4. 涉及技术：javscript、bootstrap、vue、webpack等。
+
+5. 欢迎点星星，就是右上角那个。
 
 6. 对主页还有代码(其实代码写得有点渣，希望大神不吝赐教)有什么建议的欢迎在[issues](https://github.com/JayZangwill/JayZangwill.github.io/issues)提出来。
 
