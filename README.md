@@ -12,3 +12,13 @@
 4. 欢迎点星星，就是右上角那个。
 
 6. 对主页还有代码(其实代码写得有点渣，希望大神不吝赐教)有什么建议的欢迎在[issues](https://github.com/JayZangwill/JayZangwill.github.io/issues)提出来。
+
+## 更新历史
+
+1. 第一个版本：用简单的html、css、javascript搭建的个人主页。
+
+2. 引入了bootstrap和grunt
+
+3. 引入了angular将grunt改为glup
+
+4. 将angular和gulp改为vue和webpack
