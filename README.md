@@ -5,7 +5,7 @@
      //运行 npm run dev
      //打包 npm run build
     
-1. 个人主页的第四次大更新，用vue-cli搭建的，支持scss，es6。:tada:
+1. 个人主页的第四次大更新，用vue-cli搭建的多页面主页，支持scss，es6。:tada:
 
 3. 主页不支持ie9以下浏览器。
 
