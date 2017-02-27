@@ -10,6 +10,7 @@
 			<div class="col-md-12 describe">
 				<h3>补充</h3>
 				<ol>
+					<li>熟悉web语义化及w3c标准，熟练掌握DOM、BOM、AJAX、JSON。</li>
 					<li>曾阅读过jQuery的部分源码，能自己<strong>独立封装出</strong>jQuery的一些常用功能</li>
 					<li>注重代码的规范性，和浏览器及手机端的兼容</li>
 					<li>能够熟练使用git&github进行团队合作</li>
@@ -94,7 +95,7 @@
 				}, {
 					text: 'scss',
 					max: 100
-				}], [80, 80, 75], [80, 80, 65, 45, 70]),
+				}], [80, 80, 80], [80, 80, 65, 45, 70]),
 				toolOption = _createOption("工具和IDE", [{
 					text: 'git&github',
 					max: 100

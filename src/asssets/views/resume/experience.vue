@@ -7,6 +7,7 @@
 		<p><strong>责任描述：</strong>负责项目的登陆页面及相关登陆逻辑、整个项目的报表部分、用户管理页面及相关逻辑、与后端进行交互以及最后的测试工作。</p>
 		<h3 class="text-center">组织项目</h3>
 		<h4>安阳工学院信息技术实验室主页 <a href="https://infotechlab.github.io/">demo</a> & <a href="https://github.com/InfoTechLab/InfoTechLab.github.io">项目描述及源码</a></h4>
+		<h4>河南前端交流群官网 <a href="https://github.com/henanjs">github主页</a></h4>
 		<h3 class="text-center">个人项目</h3>
 		<h4>基于node+mongodb搭建的银行卡管理系统 <a href="http://www.jayzangwill.cn/bank-card/index.html">demo</a> & <a href="https://github.com/JayZangwill/bank-card">项目描述及源码</a></h4>
 		<h4>基于自己封装的jQuery搭建的弹幕系统 <a href="http://www.jayzangwill.cn/Barrage/index.html">demo</a> & <a href="https://github.com/JayZangwill/Barrage">项目描述及源码</a></h4>
