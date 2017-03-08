@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Velocity from 'velocity-animate';
 import App from './App';
 /* eslint-disable no-new */
-var vm = new Vue({
+let vm = new Vue({
 	el: '#app',
 	data: {
 		noLowIe: true,
@@ -14,12 +14,11 @@ var vm = new Vue({
 	components: {
 		App
 	},
-	methods: {
-		loading() {
-			var ie = this.noLowIe;
+	created(){
+			let ie = this.noLowIe;
 			if(ie) {
 				//加载资源部分
-				var myAudio = this.myAudio = new Audio(),
+				let myAudio = this.myAudio = new Audio(),
 					homeImg = new Image(),
 					count = 0,
 					self = this;
@@ -47,11 +46,6 @@ var vm = new Vue({
 					}
 				};
 			}
-		},
-		isLowIe(){
 			this.noLowIe = navigator.appVersion.search((/MSIE [678]/i)) === -1;
-		}
 	}
 });
-vm.isLowIe();
-vm.loading();

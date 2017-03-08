@@ -9,10 +9,10 @@ import App from './App';
 /* eslint-disable no-new */
 window.jQuery=window.$=$;
 Vue.use(VueRouter);
-var router = new VueRouter({
+let router = new VueRouter({
   routes
 });
-var vm = new Vue({
+let vm = new Vue({
 	el: '#app',
 	router,
 	data: {

@@ -38,7 +38,7 @@
 		<div class="introduct">
 			<h2 class="text-center">简单介绍</h2>
 			<p>一名有着<strong>近两年</strong>前端编码经验的前端coder，追求优美的界面、简洁而高效的代码，有些代码洁癖，注重代码的性能优化。喜欢用scss编写css代码。开源项目<a href="https://github.com/henanjs">河南前端交流群</a>维护者之一。
-				<router-link active-class="actived" to="/skills">这里</router-link>是我的技能，常用昵称<span>Jay Zangwill</span>行走于各大网站：
+				<router-link active-class="actived" to="/skills">这里</router-link>是我的技能，常用昵称<a href="https://www.baidu.com/s?ie=UTF-8&wd=Jayzangwill">Jay Zangwill</a>行走于各大网站：
 				<a href="https://github.com/JayZangwill">github</a>、
 				<a href="https://www.zhihu.com/people/zhang-jie-24-34-16/activities">知乎</a>&&
 				<a href="https://zhuanlan.zhihu.com/jayzangwill">知乎专栏</a>、

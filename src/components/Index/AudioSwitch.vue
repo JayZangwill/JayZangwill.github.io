@@ -35,6 +35,7 @@
 		methods: {
 			soundSwitch: function(sw,count,e) {
 				e.target.style.cssText="z-index:-2;opacity:0;";
+				//sw=play||pause
 				this.myAudio[sw]();
 				this.$el.getElementsByTagName("i")[count].style.cssText="z-index:0;opacity:1;";
 			}
