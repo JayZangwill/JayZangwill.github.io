@@ -41,13 +41,15 @@
 
 <style scoped lang="scss">
 	.links {
-		width: 320px;
 		margin: 0 auto;
+		width: 320px;
+		
 		text-align: center;
 		a {
+			padding: 5px 25px;
+			
 			font-family: 'SnellRoundhand6b559e215165d8';
 			font-size: 30px;
-			padding: 5px 25px;
 			&:link {
 				color: #fff;
 			}

@@ -20,7 +20,7 @@
 				<p>性别：男</p>
 				<p>爱好：web前端，乒乓球，台球，看动漫，cosplay,装X等</p>
 				<div class="text-center">
-					<img src="../../img/touxiang.jpg" alt="头像" />
+					<img src="../../img/touxiang.jpg" alt="头像">
 				</div>
 			</div>
 		</div>

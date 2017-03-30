@@ -1,11 +1,13 @@
 <template>
 	<div id="app" v-if="noLowIe">
 			<clock v-show="go"></clock>
+			<!--加载图片和时钟的显示由父组件传进来的go决定-->
 		<div :class="{loading:!go}" v-if="!go">
 			<img src="../../asssets/img/timg.gif" alt="loading">
 			<p>加载中 ......</p>
 		</div>
 		<div v-else>
+			<!--继续将获得的myAudio往子组件传:myAudio是子组件对应的prop变量名，如果这里去掉一个o子组件里的prop的这个也要去掉o-->
 			<audio-switch :myAudio="myAudio"></audio-switch>
 			<bg></bg>
 			<name></name>

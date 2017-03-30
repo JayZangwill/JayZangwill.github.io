@@ -13,20 +13,30 @@
 		width: 90%;
 		li {
 			display: inline-block;
+			
 			width: 31%;
 			height: $height;
-			line-height: $height/2;
+			
 			text-align: center;
+			line-height: $height/2;
 			&:nth-child(2) {
 				margin: 0 1.15%;
 			}
 			a {
 				display: block;
-				font-size: 20px;
-				height: 100%;
-				text-decoration: none;
-				transition: all ease-in .4s;
+				
+				-webkit-border-radius: 0 0 10px 10px;
+				-moz-border-radius: 0 0 10px 10px;
 				border-radius: 0 0 10px 10px;
+				height: 100%;
+				
+				font-size: 20px;
+				text-decoration: none;
+				
+				-webkit-transition: all ease-in .4s;
+				-moz-transition: all ease-in .4s;
+				-o-transition: all ease-in .4s;
+				transition: all ease-in .4s;
 				span{
 					@media screen and (max-width:768px){
 						display:none;

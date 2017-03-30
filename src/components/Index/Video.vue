@@ -10,11 +10,13 @@
 		position: fixed;
 		right: 0;
 		bottom: 0;
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
 		z-index: -100;
+		
+		width: auto;
+		min-width: 100%;
+		height: auto;
+		min-height: 100%;
+		
 		object-fit: cover;
 	}
 </style>

@@ -18,13 +18,18 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		color: #fff;
-		width: 320px;
-		text-indent: 32px;
-		background: rgb(180, 83, 30);
-		border-radius: 10px;
 		z-index: -1;
+		
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
 		padding:0 10px;
+		width: 320px;
+		
+		text-indent: 32px;
+		
+		color: #fff;
+		background: rgb(180, 83, 30);
 	}
 </style>
 

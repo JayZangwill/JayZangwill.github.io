@@ -1,33 +1,39 @@
 <template>
 	<div>
 		<div class="row">
-			<div id="fontEnd" class="col-md-12"></div>
+			<div id="feSkills" class="col-md-12"></div>
 		</div>
 		<div class="row">
-			<div id="tool" class="col-md-12"></div>
+			<div id="toolSkills" class="col-md-12"></div>
 		</div>
 		<div class="row">
 			<div class="col-md-12 describe">
 				<h3>补充</h3>
 				<ol>
-					<li>熟悉web语义化及w3c标准，熟练掌握DOM、BOM、AJAX、JSON。热衷研究原生js。</li>
-					<li>曾阅读过jQuery的部分源码，能自己<strong>独立封装出</strong>jQuery的一些常用功能</li>
-					<li>注重代码的规范性，和浏览器及手机端的兼容</li>
-					<li>能够熟练使用git&github进行团队合作</li>
-					<li>比较注重代码的<strong>整洁和复用性</strong>，追求<strong>高性能且简洁的代码</strong></li>
-					<li>了解node和mongodb并且独立设计出一套基于node和mongodb的<a href="http://www.jayzangwill.cn/bank-card/index.html">系统</a></li>
+					<li>熟练HTML、DIV+CSS的页面布局，能够根据设计图完成页面制作。</li>
+					<li>熟悉CSS2.1规范，了解外边距折叠等特性。</li>
+					<li>熟悉ES5/ES6，对原型、闭包、继承等有自己的理解。</li>
+					<li>熟练使用原生javascript以及常用javascript库，如：jQuery、Vue等。</li>
+					<li>熟练掌握jQuery、bootstrap，并阅读过jQuery部分源码，能独立封装出jQuery一些常用功能。</li>
+					<li>能够熟练使用git&github进行团队合作。</li>
+					<li>熟练使用scss预编译css代码。</li>
+					<li>熟练运用ajax实现异步数据传递，熟悉JSON等数据交换格式。</li>
+					<li>了解Angular、Zepto，如有需要可快速上手。</li>
+					<li>了解node、mongodb。</li>
+					<li>了解http、tcp/ip协议。</li>
 					<li>有linux系统使用经验</li>
-					<li>关注新技术，熟悉es6，并且有一颗勇于探索未知的心</li>
-					<li>追求完美，代码出现bug会想各种办法解决</li>
-					<li>有较强的学习能力做事认真，性格开朗</li>
+					<li>快速的学习能力，吃苦耐劳，有强烈的敬业精神和团队协作精神，能够承受一定的压力，能迅速的适应各环境，并融合其中。有积极进取的工作精神和实际动手能力比较注重代码的整洁和复用性、规范性，追求高性能且简洁的代码。
+</li>
+					<li>关注新技术，熟悉es6，并且有一颗勇于探索未知的心。</li>
+					<li>具有良好的审美能力。</li>
 				</ol>
 			</div>
 		</div>
 	</div>
 </template>
 <style scoped lang="scss">
-	#fontEnd,
-	#tool {
+	#feSkills,
+	#toolSkills {
 		height: 300px;
 		@media screen and (max-width: 547px) {
 			height: 600px;
@@ -35,18 +41,22 @@
 	}
 	
 	.describe {
-		color: #fff;
 		margin-bottom: 25px;
+		
+		color: #fff;
 		li {
 			list-style-type: circle;
+			
+			font-size: 16px;
 			a {
 				&:link,
 				&:visited {
 					color: #B4531E;
 				}
 				&:hover {
-					color: lighten(#B4531E, 20%);
 					text-decoration: none;
+					
+					color: lighten(#B4531E, 20%);
 				}
 			}
 		}
@@ -54,14 +64,14 @@
 </style>
 <script>
 	export default {
-		name: 'fontEnd',
+		name: 'feSkills',
 		data() {
 			return {
 				links: [{
 					href: "/introduct",
 					info: "个人简介"
 				}, {
-					href: "/skills",
+					href: "/feSkills",
 					info: "技能"
 				}, {
 					href: "/experience",
@@ -70,8 +80,8 @@
 			}
 		},
 		mounted: function() {
-				var fontEnd = echarts.init(document.getElementById('fontEnd')),
-				tool = echarts.init(document.getElementById('tool')),
+			var feSkills = echarts.init(document.getElementById('feSkills')),
+				toolSkills = echarts.init(document.getElementById('toolSkills')),
 				fontOption = _createOption("前端技能", [{
 					text: 'html',
 					max: 90
@@ -96,7 +106,7 @@
 				}, {
 					text: 'scss',
 					max: 100
-				}], [80, 80, 80], [80, 80, 65, 45, 70]),
+				}], [80, 80, 85], [80, 80, 65, 45, 70]),
 				toolOption = _createOption("工具和IDE", [{
 					text: 'git&github',
 					max: 100
@@ -116,8 +126,8 @@
 					text: 'sublime',
 					max: 100
 				}], [80, 80, 80], [90, 90, 70]);
-			fontEnd.setOption(fontOption);
-			tool.setOption(toolOption)
+			feSkills.setOption(fontOption);
+			toolSkills.setOption(toolOption)
 
 			function _createOption(title, items1, items2, value1, value2) {
 				return {
@@ -283,8 +293,8 @@
 					}, 500);
 				}
 			}
-			window.addEventListener("resize", _delate(fontEnd.resize, 500));
-			window.addEventListener("resize", _delate(tool.resize, 500));
+			window.addEventListener("resize", _delate(feSkills.resize, 500));
+			window.addEventListener("resize", _delate(toolSkills.resize, 500));
 		}
 	}
 </script>

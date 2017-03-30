@@ -6,25 +6,35 @@
 </template>
 <style scoped lang="scss">
 	.sound-switch {
-		width: 30px;
+		display: none \9;
+		
 		position: absolute;
 		top: 10px;
 		right: 10%;
-		display: none \9;
+		
+		width: 30px;
 		.music,
 		.music-disable {
-			position: absolute;
 			display: block;
+			
+			position: absolute;
+			
 			font-size: 30px;
+			
 			color: #fff;
+			
+			-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
 			transition: all 0.5s ease-in-out;
 			&:hover {
 				color: #b4531e;
 			}
 		}
 		.music {
-			opacity: 0;
 			z-index: -2;
+			
+			opacity: 0;
 		}
 	}
 </style>

@@ -64,8 +64,9 @@
 <style scoped lang="scss">
 	h1 {
 		a {
-			font-size: 20px;
 			margin-top: 20px;
+			
+			font-size: 20px;
 		}
 	}
 	
@@ -74,17 +75,20 @@
 	}
 	
 	.thumbnail {
+		-webkit-box-shadow: 5px 5px 5px gray;
+		-moz-box-shadow: 5px 5px 5px gray;
 		box-shadow: 5px 5px 5px gray;
 	}
 	
 	.breadcrumb {
 		margin-top: 20px;
+		
 		background-color: #ddd;
 	}
 	
 	.divi {
-		border: 1px solid gray;
 		margin: 10px auto;
+		border: 1px solid gray;
 	}
 </style>
 <script>

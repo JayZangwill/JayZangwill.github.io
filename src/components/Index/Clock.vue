@@ -7,9 +7,10 @@
 <style scoped>
 	.canvas-wrap {
 		position: relative;
-		width: 300px;
-		margin: auto;
 		z-index: -1;
+		
+		margin: auto;
+		width: 300px;
 	}
 </style>
 <script>

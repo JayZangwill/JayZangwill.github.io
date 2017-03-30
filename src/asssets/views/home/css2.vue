@@ -22,11 +22,11 @@
 				<p>这个效果其实可以放在我欢迎页的那几个圆圈上作为导航用，感觉挺炫的，蛤蛤蛤。其实有一定css基础的来看这个的代码其实不难理解，老规矩，标签部分右键查看代码</p>
 				<pre>
     .d3 {
-    -wbkit- perspective: 800px;
+    -webkit- perspective: 800px;
     -moz- perspective: 800px;
     -o- perspective: 800px;
     perspective: 800px;
-    -wbkit- perspective-origin: 50% 50%;
+    -webkit- perspective-origin: 50% 50%;
     -moz- perspective-origin: 50% 50%;
     -o- perspective-origin: 50% 50%;
     perspective-origin: 50% 50%;
@@ -106,66 +106,80 @@
 	}
 	
 	.d3 {
-		-wbkit- perspective: 800px;
+		margin: auto;
+		width: 300px;
+		
+		-webkit- perspective: 800px;
 		-moz- perspective: 800px;
 		-o- perspective: 800px;
 		perspective: 800px;
-		-wbkit- perspective-origin: 50% 50%;
+		-webkit- perspective-origin: 50% 50%;
 		-moz- perspective-origin: 50% 50%;
 		-o- perspective-origin: 50% 50%;
 		perspective-origin: 50% 50%;
-		width: 300px;
-		margin: auto;
 	}
 	
 	.bigCircular {
+		position: relative;
+		
+		margin: auto;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
 		width: 200px;
 		height: 200px;
-		border-radius: 50%;
+		
 		background-color: #31B0D5;
-		position: relative;
-		margin: auto;
-		transform-style: preserve-3d;
+		
 		-webkit-transform-style: preserve-3d;
-		-o-transform-style: preserve-3d;
 		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
 	}
 	
 	.smCircular1,
 	.smCircular2 {
-		width: 180px;
-		height: 180px;
-		border-radius: 50%;
 		position: absolute;
 		left: 10px;
 		top: 10px;
+		
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		width: 180px;
+		height: 180px;
+		
 		cursor: pointer;
 	}
 	
 	.smCircular1 {
 		background-color: #5CB85C;
-		transition: transform 1s ease-in-out;
+		
 		-webkit-transition: -webkit- transform 1s ease-in-out;
-		-o-transition: -o-transform 1s ease-in-out;
-		-moz-transition: -moz-transform 1s ease-in-out;
-		transform-origin: bottom;
+		-moz-transition:        -moz-transform 1s ease-in-out;
+		-o-transition:            -o-transform 1s ease-in-out;
+		transition:                  transform 1s ease-in-out;
 		-webkit-transform-origin: bottom;
-		-o-transform-origin: bottom;
 		-moz-transform-origin: bottom;
+		-o-transform-origin: bottom;
+		transform-origin: bottom;
 	}
 	
 	.bigCircular:hover .smCircular1 {
-		transform: rotateX(-180deg);
 		-webkit-transform: rotateX(-180deg);
-		-o-transform: rotateX(-180deg);
 		-moz-transform: rotateX(-180deg);
+		-o-transform: rotateX(-180deg);
+		transform: rotateX(-180deg);
 	}
 	
 	.smCircular2 {
-		text-align: center;
-		padding-top: 80px;
-		background-color: #262626;
 		z-index: -10;
+		
+		padding-top: 80px;
+		
+		background-color: #262626;
+		
+		text-align: center;
 	}
 	
 	.smCircular2 a {
