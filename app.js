@@ -1,4 +1,5 @@
 const express = require('express'),
+  chat=require('./chat/server'),
 	router = express.Router(),
 	assert = require('assert'),
 	path = require('path'),
@@ -191,6 +192,7 @@ app.get('/out', (req, res) => {
 });
 
 app.listen(80);
+chat.run();
 
 //插入操作
 function insertDocuments(db, data, callback) {
