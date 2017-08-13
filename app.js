@@ -6,9 +6,11 @@ const express = require('express'),
 	querystring = require('querystring'),
 	MongoClient = require('mongodb').MongoClient,
 	url = 'mongodb://localhost:27017/myproject', // 数据库所在位置
+	compression = require('compression'),
 	app = express();
 let userinfo; // 用户的信息
 
+app.use(compression());
 app.use(express.static(__dirname));
 
 // 注册
