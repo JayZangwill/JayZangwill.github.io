@@ -1,0 +1,202 @@
+$lowIe: false !default; // 默认不兼容ie9一下的
+//清除浮动
+%clearFix {
+    @if ($lowIe) {
+        *zoom: 1;
+    }
+    &:after {
+        overflow: hidden;
+        display: block;
+        visibility: hidden;
+        height: 0;
+        content: '';
+        clear: both;
+    }
+}
+
+//单行截断
+%ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    white-space: nowrap;
+}
+
+//文本两端对齐
+%justify {
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    text-align-last: justify;
+}
+
+//居中
+%center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%positionCenter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+@mixin imgCenter($width,$height) {
+	position: relative;
+	overflow: hidden;
+	width: $width;
+	height: $height;
+	@if($lowIe){
+		*text-align: center;
+		*line-height: $height;
+		*font-size: floor($height / 1.14);
+	}
+	img {
+		@extend %positionCenter;
+		max-width: $width;
+		max-height: $height;
+		if($lowIe) {
+			*position: static;
+			*vertical-align:middle;
+		}
+	}
+}
+
+@mixin marginCenter($width, $height) {
+    @extend %center;
+    margin-top: $width/2;
+    margin-left: $width/2;
+    width: $width;
+    height: $height;
+}
+
+//物理1px线
+@mixin halfPixel($color) {
+    width: 100%;
+    height: 1px;
+    background: $color;
+    transform: scaleY(0.5);
+}
+
+//三角
+@mixin triangle($size, $color, $direction:'top') {
+    width: 0;
+    height: 0;
+    border: $size solid;
+    @if($direction=='top') {
+        border-color: $color transparent transparent;
+    }
+    @else if($direction=='right') {
+        border-color: transparent $color transparent transparent;
+    }
+    @else if($direction=='bottom') {
+        border-color: transparent transparent $color;
+    }
+    @else if($direction=='left') {
+        border-color: transparent transparent transparent $color;
+    }
+    @else {
+        @error "Invalid direction.";
+    }
+}
+
+//多行截断（仅移动端）
+@mixin lineClamp($line:2) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+//半透明背景
+@mixin bgAlpha($color,$alpha) {
+	$rgba:$color;
+	background-color: rgba($rgba,$alpha);
+	@if($lowIe) {
+		$ieHexStr: ie-hex-str($rgba);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ieHexStr}, endColorstr=#{$ieHexStr});
+	}
+}
+
+//自动添加高清图
+@mixin imgSet($url, $notDeep:true) {
+    $twoUrl: '';
+    @if($notDeep) {
+        $twoUrl: str-insert($url, '@2x', -5);
+    }
+    @else {
+        $dot: 0;
+        $string: $url;
+        @while ($string) {
+            $index: str-index($string, '.');
+            @if ($index) {
+                $dot: $dot + $index;
+                $string: str-slice($string, $index + 1);
+            }
+            @else {
+                $string: null;
+            }
+        }
+        $twoUrl: str-insert($url, '@2x', $dot);
+    }
+    background-image: url($url);
+    background-image: image-set(url($url 1x), url($twoUrl 2x));
+}
+
+//移动端点击高亮
+@mixin highLight($color, $alpha:1) {
+    -webkit-tap-highlight-color: rgba($color, $alpha);
+}
+
+//小屏
+@mixin minScreen($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+//大屏
+@mixin maxScreen($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+//区间
+@mixin section($minWidth, $maxWidth) {
+    @media screen and (max-width: $maxWidth) and (min-width: $minWidth) {
+        @content;
+    }
+}
+
+//横屏
+@mixin landscape {
+    @media all and (orientation: landscape) {
+        @content;
+    }
+}
+
+//竖屏
+@mixin portrait {
+    @media all and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin retina($devicePixelRatio:2) {
+    @media screen and (-webkit-device-pixel-ratio: $devicePixelRatio) {
+        @content;
+    }
+}
