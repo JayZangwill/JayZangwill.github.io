@@ -29,6 +29,7 @@ a {
 
 html,
 body {
+	min-width: 320px;
     height: 100%;
 }
 
@@ -60,6 +61,7 @@ body {
     z-index: 2;
     padding: 10px 0;
 	width: 100%;
+	min-width:320px;
     color: #8a6d3b;
     background-color: #fcf8e3;
     text-align: center;
@@ -67,6 +69,7 @@ body {
 }
 
 .swiper-container {
+	cursor: grab;
 	overflow: hidden;
 	@extend %center;
 	width: 800px;
@@ -84,9 +87,6 @@ body {
             content: '';
         }
     }
-	.swiper-slide {
-		//margin-right:30px;
-	}
 }
 
 .information {
@@ -103,6 +103,7 @@ body {
         line-height: 30px;
     }
     .explain {
+		padding-top: 10px;
         a {
             color: #00c;
             &:hover {
@@ -110,6 +111,9 @@ body {
             }
         }
     }
+	.contacts a:hover {
+		color: #000;
+	}
     .number,
     .github {
         margin-left: 20px;
@@ -131,6 +135,10 @@ body {
 }
 
 @include minScreen(414px) {
+	.swiper-container {
+		position:static;
+		transform: none;
+	}
     .information {
         .education {
             span {
@@ -149,10 +157,7 @@ body {
             margin-left: 0;
         }
     }
-}
-
-@include minScreen(320px) {
-    body {
+	body {
         padding-top: 89px;
     }
 }
