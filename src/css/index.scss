@@ -1,3 +1,4 @@
+@charset 'utf-8';
 @import './_tools';
 body,
 p,
@@ -29,7 +30,7 @@ a {
 
 html,
 body {
-	min-width: 320px;
+    min-width: 320px;
     height: 100%;
 }
 
@@ -41,7 +42,7 @@ body {
     font-size: 16px;
     line-height: 23px;
     -webkit-font-smoothing: subpixel-antialiased;
-    transition: padding 0.3s linear;
+    transition: padding 1s linear;
 }
 
 .iconfont {
@@ -60,8 +61,8 @@ body {
     left: 0;
     z-index: 2;
     padding: 10px 0;
-	width: 100%;
-	min-width:320px;
+    width: 100%;
+    min-width: 320px;
     color: #8a6d3b;
     background-color: #fcf8e3;
     text-align: center;
@@ -69,10 +70,10 @@ body {
 }
 
 .swiper-container {
-	cursor: grab;
-	overflow: hidden;
-	@extend %center;
-	width: 800px;
+    cursor: grab;
+    overflow: hidden;
+    @extend %center;
+    width: 800px;
     h3 {
         position: relative;
         font-size: 32px;
@@ -93,7 +94,6 @@ body {
     border-radius: 10px;
     padding: 0 20px 40px;
     background: #fff;
-
     .content {
         margin-left: 30px;
     }
@@ -101,9 +101,15 @@ body {
         padding-top: 10px;
         font-size: 21px;
         line-height: 30px;
+        span a {
+            color: #00c;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     .explain {
-		padding-top: 10px;
+        padding-top: 10px;
         a {
             color: #00c;
             &:hover {
@@ -111,8 +117,39 @@ body {
             }
         }
     }
-	.contacts a:hover {
-		color: #000;
+    .contacts {
+		padding-top: 10px;
+		a:hover {
+        color: #000;
+    }
+	} 
+	#email {
+		position:relative;
+		&:hover {
+			&::after,
+			&::before {
+				display:block;
+			}
+		}
+		&::after {
+			display: none;
+			position: absolute;
+			right: 0;
+			bottom: -40px;
+			border-radius: 5px;
+			padding: 5px 10px;
+			color: #8a6d3b;
+			background: #efe3a7;
+			content: '点击复制';
+		}
+		&::before {
+			display: none;
+			position: absolute;
+			right: 10px;
+			bottom: -10px;
+			content: '';
+			@include triangle(10px,#efe3a7,'bottom');
+		}
 	}
     .number,
     .github {
@@ -126,19 +163,19 @@ body {
 }
 
 @include minScreen(768px) {
-	.information {
-		border-radius: 0;
-	}
-	.swiper-container {
-		width: 100%;
-	}
+    .information {
+        border-radius: 0;
+    }
+    .swiper-container {
+        width: 100%;
+    }
 }
 
 @include minScreen(414px) {
-	.swiper-container {
-		position:static;
-		transform: none;
-	}
+    .swiper-container {
+        position: static;
+        transform: none;
+    }
     .information {
         .education {
             span {
@@ -157,7 +194,7 @@ body {
             margin-left: 0;
         }
     }
-	body {
-        padding-top: 89px;
+    body {
+        padding-top: 100px;
     }
 }
