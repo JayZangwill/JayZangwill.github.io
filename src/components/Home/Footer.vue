@@ -20,6 +20,7 @@ footer {
     text-align: center;
     color: #fff;
     .iconfont {
+        margin-right: 5px;
         font-size: 35px;
     }
     a {

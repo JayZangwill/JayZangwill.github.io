@@ -5,20 +5,19 @@
 		<div class="row">
 			<div class="col-md-10">
 				<article>
-					<p>Hello,大家好我叫张杰，目前任职于搜狗公司的搜索事业部，担任前端重构师。一般大家都叫我Jay Zangwill。至于我为什么要起个英文名那是因为我的名字很常见，所以起个英文名就不会有人和我重名了，蛤蛤蛤蛤！</p>
-					<p>我外表看起来是个挺正直的人，但是和我熟的人应该会知道我其实还是个挺正(dou)直(bi)的人，和我很好相处，平易近人，蛤蛤蛤！</p>
-					<p>我平时比较喜欢聊天，所以欢迎大家到我留言板去留言，话题不限，蛤蛤蛤！</p>
-					<p>我平时也比较喜欢看动漫什么的，虽然来来去去就是那几部，不过一部就好几百集，也有得够看的了，加上平时没有什么时间，所以看得比较慢。看动漫不是因为这个人幼稚什么的，也不是因为这个人不够成熟，那只是因为这个人把看动漫作为一种爱好了，现在也有不少成年人玩cosplay的。当然，我也像其他的男生一样喜欢玩点游戏什么的，虽然玩得一般，个人认为爱好多交到的朋友就多，朋友多了人脉就广了，人脉可是很值钱的，蛤蛤蛤！</p>
-					<p>我平时也经常去些图片网站逛逛，一来可以找些做网页的素材，一来也可以陶冶陶冶心情，毕竟看些好看的东西人的心情就会好很多，工作效率自然也会上去了。</p>
-					<p>本人现在正在前端的伟大航路上探寻One Piece，是励志成为一名优秀的前端攻城狮的男人，就像《海贼王》里的路飞一样。梦想虽然美好，但是现实挺骨干的。嗯~还是做好自己眼前的事再说吧...</p>
+					<p>一张坏坏的笑脸，连两道浓浓的眉毛也泛起柔柔的涟漪，一副放荡不羁的笑意，色而不淫的页面设计，风流而不下流的代码风格，帅气中又带着一抹温柔专注的半仙。</p>
+					<p>常用昵称Jay Zangwill穿梭于各大网站，喜欢探索未知，特别喜欢睡觉。</p>
 				</article>
 			</div>
 			<div class="col-md-2">
-				<h3>资料卡</h3>
-				<p>姓名：张杰</p>
-				<p>英文名：Jay Zangwill</p>
-				<p>性别：男</p>
-				<p>爱好：web前端，乒乓球，台球，看动漫，cosplay,装X等</p>
+				<h3 class="data-title">资料卡</h3>
+				<p>昵称：Jay Zangwill</p>
+				<p>爱好：web前端，乒乓球，台球，看动漫，cosplay，装X等</p>
+				<p>履历：</p>
+				<ul class="experience">
+					<li>2017.5~2018.4 搜狗搜索事业部前端重构师（实习生）</li>
+					<li>2018.5~今 鱼泡泡技术部前端开发工程师</li>
+				</ul>
 				<div class="text-center">
 					<img src="../../assets/img/touxiang.jpg" alt="头像">
 				</div>
@@ -26,7 +25,7 @@
 		</div>
 	</div>
 </template>
-<style scoped>
+<style lang="scss" scoped>
 article {
     font-size: 20px;
 }
@@ -36,10 +35,24 @@ article p {
 }
 
 .col-md-2 p {
+    margin-bottom: 0;
+    padding-top: 10px;
     font-size: 15px;
 }
 
 .col-md-10 {
     border-right: dotted 1px black;
+}
+
+.data-title {
+    margin: 0;
+}
+
+.experience {
+    padding-left: 0;
+    font-size: 15px;
+    li + li {
+        padding-top: 5px;
+    }
 }
 </style>

@@ -1,13 +1,14 @@
 <template>
-    <header>
-        <img src="/static/home.png" alt="head">
-        <div class="words">
-            <h1>路途遥远</h1>
-            <h2>勿忘初心</h2>
-            <h3>方得始终</h3>
-            <p>欢迎来到Zangwill世界</p>
-        </div>
-    </header>
+	<header>
+		<img src="/static/home.png" alt="head">
+		<transition name="fade">
+			<div class="words" v-show="show">
+				<h1>路途遥远</h1>
+				<h2>勿忘初心</h2>
+				<h3>方得始终</h3>
+			</div>
+		</transition>
+	</header>
 </template>
 <style scoped lang="scss">
 @mixin h($left, $top) {
@@ -26,17 +27,20 @@ header {
         width: 100%;
         position: absolute;
     }
-    .words {
+	.words {
+		height: 400px;
+	}
+    .fade-enter-active {
+        transition: all 1s;
+    }
+    .fade-enter {
         opacity: 0;
-        transition: opacity 3s linear;
+		transform: translateX(-10px);
     }
     @for $i from 1 through 3 {
         h#{$i} {
-            @include h(12%+$i*3, 5%+$i*15);
+            @include h(12% + $i * 3, 5% + $i * 15);
         }
-    }
-    p {
-        @include h(18%, 70%);
     }
 }
 
@@ -48,10 +52,15 @@ header {
 </style>
 <script>
 export default {
+    data() {
+        return {
+            show: false
+        };
+    },
     mounted() {
         setTimeout(() => {
-            document.querySelector(".words").style.opacity = 1;
-        }, 1000);
+            this.show = true;
+        }, 1500);
     }
 };
 </script>
