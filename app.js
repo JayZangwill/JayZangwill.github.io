@@ -1,5 +1,4 @@
 const express = require('express'),
-  chat=require('./chat/server'),
 	router = express.Router(),
 	assert = require('assert'),
 	path = require('path'),
@@ -189,16 +188,15 @@ app.get('/findmoney', (req, res) => {
 });
 
 // 登出
-app.get('/out', (req, res) => {
+app.get('/out', () => {
 	userinfo = undefined;
 });
 
 app.listen(80);
-chat.run();
 
 //插入操作
 function insertDocuments(db, data, callback) {
-	let collection = db.collection('documents');
+	let collection = db.db('myproject').collection('documents');
 	collection.insertOne(data, (err, result) => {
 		assert.equal(err, null);
 		console.log(getTime());
@@ -211,7 +209,7 @@ function insertDocuments(db, data, callback) {
 function findDocuments(db, callback, search) {
 	// Get the documents collection
 	search = search || {};
-	let collection = db.collection('documents');
+	let collection = db.db('myproject').collection('documents');
 	// Find some documents
 	collection.find(search).toArray((err, docs) => {
 		assert.equal(err, null);
@@ -223,7 +221,7 @@ function findDocuments(db, callback, search) {
 function updateDocument(db, userinfo, money, callback) {
 
 	// Get the documents collection
-	let collection = db.collection('documents');
+	let collection = db.db('myproject').collection('documents');
 
 	// Update document where a is 2, set b equal to 1
 	collection.updateOne({
