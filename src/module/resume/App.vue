@@ -33,7 +33,7 @@ export default {
 <style lang="scss">
 @import url("../../common/css/bootstrap.min.css");
 @import url("../../common/css/common.css");
-@import url("http://cdn.webfont.youziku.com/webfonts/nomal/91608/46931/58148752f629d8107cfe8864.css");
+@import url("//cdn.webfont.youziku.com/webfonts/nomal/91608/46931/58148752f629d8107cfe8864.css");
 .menu {
     overflow: hidden;
     padding: 15px 0;
