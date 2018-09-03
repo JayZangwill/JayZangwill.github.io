@@ -7,10 +7,7 @@ const express = require('express'),
   url = 'mongodb://localhost:27017/myproject', // 数据库所在位置
   compression = require('compression'),
   privateKey = fs.readFileSync('./certificate/www.jayzangwill.cn.key', 'utf8'),
-  certificate = fs.readFileSync(
-    './certificate/www.jayzangwill.cn.crt',
-    'utf8'
-  ),
+  certificate = fs.readFileSync('./certificate/www.jayzangwill.cn.crt', 'utf8'),
   app = express();
 let userinfo; // 用户的信息
 
