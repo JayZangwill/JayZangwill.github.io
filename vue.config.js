@@ -14,5 +14,8 @@ module.exports = {
       title: 'Index Page',
       chunks: ['chunk-vendors', 'chunk-common', 'resume']
     }
+  },
+  devServer: {
+    proxy: 'https://www.jayzangwill.cn/'
   }
 }
