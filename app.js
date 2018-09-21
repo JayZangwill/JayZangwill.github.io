@@ -16,8 +16,8 @@ const express = require ('express'),
   superagent = require ('superagent');
 let userinfo; // 用户的信息
 
-app.all ('/', function (req, res, next) {
-  !req.secure
+app.all ('*', function (req, res, next) {
+  !req.secure && /(\.html)|(#.*)|\/$/.test(req.originalUrl)
     ? res.redirect (301, 'https://www.jayzangwill.cn' + req.url)
     : next ();
 });
