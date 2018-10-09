@@ -1,16 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
-import {
-  getSize
-} from '@/common/utils'
+import axios from 'axios'
 import {
   router
 } from './router'
 
 Vue.config.productionTip = false
-
-getSize()
-window.addEventListener('resize', getSize)
+Vue.prototype.$axios = axios
 
 new Vue({
   router,

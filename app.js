@@ -28,28 +28,20 @@ app.get('/article', (req, res, next) => {
       next();
     }
     let $ = cheerio.load(main.text);
-    let result = {
-      href: [],
-      title: [],
-      time: [],
-      description: [],
-    };
+    let result = [];
     $('.article-title').each((_, element) => {
       let $element = $(element);
-      result.href.push(
-        'https://jayzangwill.github.io' + $element.attr('href')
-      );
-      result.title.push($element.text());
+      result.push({
+        href: 'https://jayzangwill.github.io' + $element.attr('href'),
+        title: $element.text()
+      });
     });
-    $('time').each((_, element) => {
+    $('time').each((i, element) => {
       let $element = $(element);
-      result.time.push($element.text());
-    });
-    $('.article-entry').each((_, element) => {
-      let $element = $(element);
-      result.description.push($element.text());
+      result[i].time = $element.text()
     });
     res.json({
+      status: 200,
       message: 'success',
       result,
     });

@@ -1,11 +1,10 @@
 @font-face {
-  font-family: 'iconfont';
-  /* project id 864031 */
-  src: url('//at.alicdn.com/t/font_864031_gsv2h2emsl8.eot');
-  src: url('//at.alicdn.com/t/font_864031_gsv2h2emsl8.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_864031_gsv2h2emsl8.woff') format('woff'),
-    url('//at.alicdn.com/t/font_864031_gsv2h2emsl8.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_864031_gsv2h2emsl8.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 864031 */
+  src: url('//at.alicdn.com/t/font_864031_pzy0uv8c4o.eot');
+  src: url('//at.alicdn.com/t/font_864031_pzy0uv8c4o.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_864031_pzy0uv8c4o.woff') format('woff'),
+  url('//at.alicdn.com/t/font_864031_pzy0uv8c4o.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_864031_pzy0uv8c4o.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -24,10 +23,15 @@ img,
 canvas,
 a,
 p,
-ui,
-li {
+ul,
+li,
+h3 {
   padding: 0;
   margin: 0;
+}
+
+li {
+  list-style: none;
 }
 
 main,
@@ -37,11 +41,14 @@ nav {
 
 a {
   text-decoration: none;
+  color: rgba(#fff, 0.6);;
+  -webkit-tap-highlight-color: rgba(#fff, 0);
 }
 
 html,
 body {
   height: 100%;
-  font-family: arial, pingfang sc, stheiti, microsoft yahei, sans-serif;
   min-width: 320px;
+  color: rgba(#fff, 0.6);
+  font-family: arial, pingfang sc, stheiti, microsoft yahei, sans-serif;
 }
