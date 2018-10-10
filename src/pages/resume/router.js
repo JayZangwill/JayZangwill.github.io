@@ -1,20 +1,24 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '@/components/index/home.vue'
-import about from '@/components/index/about.vue'
-import say from '@/components/index/say.vue'
+import introduct from '@/components/resume/introduct.vue'
+import experience from '@/components/resume/experience.vue'
+import skills from '@/components/resume/skills.vue'
+import work from '@/components/resume/work.vue'
 
 Vue.use(Router)
 
 export const router = new Router({
   routes: [{
     path: '/',
-    component: home,
+    component: introduct,
   }, {
-    path: '/about',
-    component: about,
+    path: '/experience',
+    component: experience,
   }, {
-    path: '/say',
-    component: say
+    path: '/skills',
+    component: skills
+  }, {
+    path: '/work',
+    component: work
   }]
 })
