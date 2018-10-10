@@ -5,11 +5,11 @@
         <img src="../../assets/img/touxiang.jpg" alt="avatar">
       </router-link>
     </div>
-    <h3>good good study day day up!</h3>
+    <h3>Jay Zangwill</h3>
     <div class="links-wrap">
       <a target="_blank" class="iconfont" href="https://github.com/JayZangwill">&#xf1b4;</a>
       <a target="_blank" class="iconfont" href="https://jayzangwill.github.io/blog/">&#xe60e;</a>
-      <a class="iconfont" href="/">&#xe601;</a>
+      <a class="iconfont" href="resume.html">&#xe601;</a>
     </div>
     <ul class="article-wrap">
       <template v-if="articles.length">
@@ -81,7 +81,8 @@
 
     h3 {
       margin-top: 40px;
-      font-size: 25px;
+      color: #fff;
+      font-size: 30px;
       text-align: center;
       font-weight: normal;
 
@@ -149,6 +150,7 @@
       }
 
       .loading {
+        padding: 0;
         font-size: 30px;
         color: #fff;
         text-align: center;
