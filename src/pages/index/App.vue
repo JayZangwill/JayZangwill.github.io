@@ -1,7 +1,12 @@
 <template>
   <main id="app">
     <my-nav :content="nav"></my-nav>
-    <router-view class="main"></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <footer>
+      <a href="http://www.miitbeian.gov.cn">桂ICP备16009800号</a>
+    </footer>
   </main>
 </template>
 
@@ -15,10 +20,10 @@
         nav: [{
           link: '/',
           content: '&#xe60d;<p>首页</p>'
-        },{
+        }, {
           link: 'say',
           content: '&#xe771;<p>留言板</p>'
-        },{
+        }, {
           link: 'about',
           content: '&#xe600;<p>关于我</p>'
         }]
@@ -40,13 +45,21 @@
   @import '../../common/css/common.scss';
 
   #app {
+    position: relative;
+    padding-bottom: 60px;
     min-height: 100%;
-    height: 1px;
-  }
-
-  .main {
-    min-height: 100%;
+    box-sizing: border-box;
     background: url('../../assets/img/bg.jpg') no-repeat top center / cover;
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      line-height: 50px;
+      a:hover {
+        color: #fff;
+      }
+    }
   }
 
 </style>

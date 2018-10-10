@@ -12,7 +12,10 @@
       <a class="iconfont" href="/">&#xe601;</a>
     </div>
     <ul class="article-wrap">
-      <li v-for="(item, i) in articles" :key="i"><a :href="item.href">{{item.title}}</a><time>{{item.time}}</time></li>
+      <template v-if="articles.length">
+        <li v-for="(item, i) in articles" :key="i"><a :href="item.href">{{item.title}}</a><time>{{item.time}}</time></li>
+      </template>
+      <li v-else class="iconfont loading">&#xe623;</li>
     </ul>
   </div>
 </template>
@@ -118,7 +121,7 @@
 
     .article-wrap {
       margin: 50px auto 0;
-      padding: 5px 10px;
+      padding: 5px 0 5px 10px;
       border-radius: 5px;
       width: 1000px;
       box-sizing: border-box;
@@ -130,12 +133,12 @@
       }
 
       li {
-        border-radius: 5px 5px 0 0;
         width: 100%;
-        padding: 0 5px;
+        padding: 0 15px 0 5px;
         box-sizing: border-box;
         font-size: 0;
         transition: background-color 0.3s linear;
+
         &:hover {
           background-color: rgba(#fff, 0.2);
         }
@@ -145,10 +148,30 @@
         }
       }
 
+      .loading {
+        font-size: 30px;
+        color: #fff;
+        text-align: center;
+        line-height: 60px;
+        animation: loading 0.8s linear infinite;
+        @keyframes loading {
+          0% {
+            transform: rotate(0)
+          }
+          100% {
+            transform: rotate(365deg)
+          }
+        }
+
+        &:hover {
+          background: none;
+        }
+      }
+
       a {
         overflow: hidden;
         display: inline-block;
-        width: 80%;
+        width: 70%;
         font-size: 20px;
         line-height: 40px;
         text-overflow: ellipsis;

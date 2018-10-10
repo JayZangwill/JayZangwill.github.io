@@ -50,6 +50,7 @@
       width: 33.33%;
       font-size: 30px;
       line-height: 40px;
+      transition: color 0.2s linear;
 
       &:hover {
         color: #fff;
