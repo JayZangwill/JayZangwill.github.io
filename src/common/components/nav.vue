@@ -27,6 +27,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../../common/css/colors.scss';
+
   nav {
     position: relative;
     box-sizing: border-box;
@@ -58,7 +60,7 @@
       }
 
       &:hover {
-        color: #fff;
+        color: $pureWhite;
       }
 
       /deep/ p {
@@ -67,7 +69,7 @@
     }
 
     .router-link-exact-active {
-      color: #fff;
+      color: $pureWhite;
     }
 
     .control {
@@ -75,7 +77,7 @@
       left: 50%;
       bottom: -40px;
       width: 100%;
-      color: #fff;
+      color: $pureWhite;
       font-size: 30px;
       transform: translateX(-50%);
       animation: move 0.5s linear infinite alternate;

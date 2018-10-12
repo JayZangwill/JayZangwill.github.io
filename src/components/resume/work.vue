@@ -41,20 +41,22 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../../common/css/colors.scss';
+
   .list {
     margin-top: 20px;
   }
 
   h4 {
-    color: #fff;
+    color: $pureWhite;
     font-weight: normal;
 
   }
 
   a {
-    color: #fff;
+    color: $pureWhite;
     position: relative;
-    border-bottom: 1px dotted rgba(#fff, 0.6);
+    border-bottom: 1px dotted $white;
     transition: color 0.2s linear;
 
     &:hover {

@@ -29,6 +29,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../../common/css/colors.scss';
+
   .introducts {
     margin-top: 10px;
   }
@@ -38,7 +40,7 @@
   }
 
   .content {
-    color: #fff;
+    color: $pureWhite;
   }
 
   a {
@@ -47,7 +49,7 @@
     transition: color 0.2s linear;
 
     &:hover {
-      color: #fff;
+      color: $pureWhite;
     }
   }
 

@@ -48,6 +48,8 @@
 </script>
 
 <style lang="scss">
+  @import '../../common/css/colors.scss';
+
   #SOHUCS {
     margin-top: 120px !important;
     width: 100% !important;
@@ -56,7 +58,7 @@
   }
 
   #SOHUCS #SOHU_MAIN .section-newslist-w .title-name-w {
-    color: #fff !important;
+    color: $pureWhite !important;
   }
 
   #SOHUCS #SOHU_MAIN .module-cmt-box .post-wrap-w div.post-wrap-main {

@@ -41,6 +41,7 @@
 </script>
 
 <style lang="scss">
+  @import '../../common/css/colors.scss';
   @import '../../common/css/common.scss';
 
   #app {
@@ -53,7 +54,7 @@
     .back-old {
       float: right;
       margin: 50px 30px 0 0;
-      color: #fff;
+      color: $pureWhite;
     }
 
     footer {
@@ -64,7 +65,7 @@
       line-height: 50px;
 
       a:hover {
-        color: #fff;
+        color: $pureWhite;
       }
     }
   }

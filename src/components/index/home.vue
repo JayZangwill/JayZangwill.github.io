@@ -38,7 +38,7 @@
 </script>
 
 <style lang="scss">
-  $white: rgba(#fff, 0.6);
+  @import '../../common/css/colors.scss';
 
   .home {
     .avatar-wrap {
@@ -79,7 +79,7 @@
 
     h3 {
       margin-top: 40px;
-      color: #fff;
+      color: $pureWhite;
       font-size: 30px;
       text-align: center;
       font-weight: normal;
@@ -102,14 +102,14 @@
         border: 1px solid $white;
         border-radius: 50%;
         width: 50px;
-        background: rgba(#fff, 0.2);
+        background: rgba($pureWhite, 0.2);
         font-size: 32px;
         line-height: 50px;
         transition: background-color 0.1s linear;
 
         &:hover {
-          color: #fff;
-          background-color: rgba(#fff, 0.3);
+          color: $pureWhite;
+          background-color: rgba($pureWhite, 0.3);
         }
 
         +a {
@@ -139,18 +139,18 @@
         transition: background-color 0.3s linear;
 
         &:hover {
-          background-color: rgba(#fff, 0.2);
+          background-color: rgba($pureWhite, 0.2);
         }
 
         +li {
-          border-top: 1px solid rgba(#fff, 0.9);
+          border-top: 1px solid rgba($pureWhite, 0.9);
         }
       }
 
       .loading {
         padding: 0;
         font-size: 30px;
-        color: #fff;
+        color: $pureWhite;
         text-align: center;
         line-height: 60px;
         animation: loading 0.8s linear infinite;
@@ -181,7 +181,7 @@
         white-space: nowrap;
 
         &:hover {
-          color: #fff;
+          color: $pureWhite;
         }
       }
 

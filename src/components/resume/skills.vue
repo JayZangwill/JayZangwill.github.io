@@ -32,6 +32,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../../common/css/colors.scss';
+
   .skill-wrap {
     p {
       display: inline-block;
@@ -47,7 +49,7 @@
 
     .height {
       span {
-        color: #fff;
+        color: $pureWhite;
         background-image: -webkit-linear-gradient(left, #cddc39, #ff9800 25%, #cddc39 50%, #ff9800 75%, #cddc39);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;

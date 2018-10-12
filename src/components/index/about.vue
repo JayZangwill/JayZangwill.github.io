@@ -21,9 +21,12 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../../common/css/colors.scss';
+
   .about {
     margin: 120px auto 0;
     width: 1000px;
+
     @media screen and (max-width: 1000px) {
       margin-top: 60px;
       width: 90%;
@@ -31,7 +34,7 @@
 
     h3 {
       font-size: 30px;
-      color: rgba(#fff, 0.8);
+      color: rgba($pureWhite, 0.8);
     }
 
     p {
@@ -44,7 +47,7 @@
         transition: all 0.2s linear;
 
         &:hover {
-          color: #fff;
+          color: $pureWhite;
           border-bottom: none;
         }
       }
@@ -52,6 +55,7 @@
 
     .qr-code {
       margin-top: 30px;
+
       img {
         width: 200px;
       }

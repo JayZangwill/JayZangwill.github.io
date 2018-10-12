@@ -82,8 +82,8 @@
 </script>
 
 <style lang="scss">
+  @import '../../common/css/colors.scss';
   @import '../../common/css/common.scss';
-  $white: rgba(#fff, 0.6);
 
   #app {
     overflow: hidden;
@@ -104,7 +104,7 @@
 
       h3 {
         margin-top: 40px;
-        color: #fff;
+        color: $pureWhite;
         font-size: 30px;
         font-weight: normal;
 
@@ -121,7 +121,7 @@
       border-radius: 50%;
       width: 140px;
       height: 140px;
-      background: rgba(#fff, 0.2);
+      background: rgba($pureWhite, 0.2);
       text-align: center;
 
       .tip {
@@ -132,7 +132,7 @@
         border-radius: 30px 30px 0;
         width: 160px;
         color: #000;
-        background: rgba(#fff, 0.8);
+        background: rgba($pureWhite, 0.8);
         transition: all 0.3s linear;
 
         @media screen and (min-width: 1000px) {
@@ -206,7 +206,7 @@
       position: absolute;
       top: 50%;
       font-size: 35px;
-      color: #fff;
+      color: $pureWhite;
     }
 
     .pre-page {
