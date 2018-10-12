@@ -1,19 +1,22 @@
 <template>
-  <main id="app">
-    <div class="avatar-wrap">
-      <router-link to="/" class="avatar">
-        <img src="../../assets/img/touxiang.jpg" alt="avatar">
-      </router-link>
-      <transition name="fade">
-        <p v-if="show" class="tip">主人说现在暂时还不想找工作，所以我不让你下载主人的简历！</p>
+  <transition name="end">
+    <main v-show="loadEnd" id="app">
+      <div class="avatar-wrap">
+        <router-link to="/" class="avatar">
+          <img src="../../assets/img/touxiang.jpg" alt="avatar">
+        </router-link>
+        <transition name="fade">
+          <p v-if="show" class="tip">主人说现在暂时还不想找工作，所以我不让你下载主人的简历！</p>
+        </transition>
+      </div>
+      <transition :name="direction">
+        <router-view class="main" @show="open"></router-view>
       </transition>
-    </div>
-    <transition :name="direction">
-      <router-view class="main" @show="open"></router-view>
-    </transition>
-    <a v-show="pre.length" href="javascript:;" class="iconfont pre-page" @click="toPre">&#xe617;</a>
-    <a v-show="next.length" href="javascript:;" class="iconfont next-page" @click="toNext">&#xe617;</a>
-  </main>
+      <a v-show="pre.length" href="javascript:;" class="iconfont pre-page" @click="toPre">&#xe617;</a>
+      <a v-show="next.length" href="javascript:;" class="iconfont next-page" @click="toNext">&#xe617;</a>
+      <img style="display:none" src="../../assets/img/bg.jpg" alt="bg" @load="loadEnd=true">
+    </main>
+  </transition>
 </template>
 
 <script>
@@ -22,6 +25,7 @@
     data() {
       return {
         show: false,
+        loadEnd: false,
         direction: '',
         pre: [],
         cur: '/',
@@ -149,6 +153,14 @@
         @media screen and (min-width: 1000px) {
           right: 130px;
         }
+      }
+
+      .end-enter-active {
+        transition: opacity 0.7s linear;
+      }
+
+      .end-enter {
+        opacity: 0;
       }
 
       .avatar {
