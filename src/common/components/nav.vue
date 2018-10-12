@@ -1,7 +1,8 @@
 <template>
   <nav>
     <div class="link-wrap" :class="{show:isShow}">
-      <router-link v-for="(item,i) in content" :to="item.link" class="iconfont link" active-class="actived" :key="i" v-html="item.content"></router-link>
+      <router-link v-for="(item,i) in content" :to="item.link" class="iconfont link" active-class="actived" :key="i"
+        v-html="item.content"></router-link>
     </div>
     <a href="javascript:;" class="iconfont control" :class="{hide:isShow}" @click="toggle">&#xe617;</a>
   </nav>
@@ -52,18 +53,22 @@
       line-height: 40px;
       transition: color 0.2s linear;
 
+      @media screen and (max-width: 1000px) {
+        font-size: 25px;
+      }
+
       &:hover {
         color: #fff;
       }
 
-      p {
+      /deep/ p {
         font-size: 20px;
       }
     }
 
-	.router-link-exact-active {
-		color: #fff;
-	}
+    .router-link-exact-active {
+      color: #fff;
+    }
 
     .control {
       position: absolute;

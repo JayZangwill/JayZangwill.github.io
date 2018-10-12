@@ -171,7 +171,7 @@
       position: absolute;
       right: 0;
       left: 0;
-      transition: all 0.5s linear;
+      transition: all 0.4s ease-out;
     }
 
     .left-leave-to,
