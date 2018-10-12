@@ -23,10 +23,10 @@
           content: '&#xe60d;<p>首页</p>'
         }, {
           link: 'say',
-          content: '&#xe771;<p>留言板</p>'
+          content: '&#xe671;<p>留言板</p>'
         }, {
           link: 'about',
-          content: '&#xe600;<p>关于我</p>'
+          content: '&#xe659;<p>关于我</p>'
         }]
       }
     },

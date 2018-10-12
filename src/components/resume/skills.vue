@@ -33,8 +33,6 @@
 
 <style lang="scss" scoped>
   .skill-wrap {
-    margin-top: 10px;
-
     p {
       display: inline-block;
       padding: 5px;
@@ -43,12 +41,8 @@
       background: rgba(#000, 0.6);
 
       +p {
-        margin-left: 5px;
+        margin: 10px 0 0 5px;
       }
-    }
-
-    .wrap+.wrap {
-      margin-top: 10px;
     }
 
     .height {
