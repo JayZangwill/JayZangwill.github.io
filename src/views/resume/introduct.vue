@@ -36,7 +36,6 @@
         <a href="https://jayzangwill.github.io/blog/">博客</a>、
         <a href="https://www.jayzangwill.cn/">主页</a>可供参观。
       </p>
-      <p><a href="https://www.jayzangwill.cn/download">简历下载</a></p>
     </div>
   </div>
 </template>
