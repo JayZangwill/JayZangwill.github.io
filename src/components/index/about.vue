@@ -24,7 +24,7 @@
   .about {
     margin: 120px auto 0;
     width: 1000px;
-    @media screen and (max-width: 998px) {
+    @media screen and (max-width: 1000px) {
       margin-top: 60px;
       width: 90%;
     }

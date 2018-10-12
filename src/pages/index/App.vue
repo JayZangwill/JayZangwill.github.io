@@ -1,6 +1,7 @@
 <template>
   <main id="app">
     <my-nav :content="nav"></my-nav>
+    <a class="back-old" href="./old/">返回旧版</a>
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
@@ -50,6 +51,11 @@
     min-height: 100%;
     box-sizing: border-box;
     background: url('../../assets/img/bg.jpg') no-repeat top center / cover;
+    .back-old {
+      float: right;
+      margin: 50px 30px 0 0;
+      color: #fff;
+    }
     footer {
       position: absolute;
       bottom: 0;

@@ -41,8 +41,6 @@
   $white: rgba(#fff, 0.6);
 
   .home {
-    overflow: hidden;
-
     .avatar-wrap {
       margin: 120px auto 0;
       border: 1px solid $white;
@@ -156,10 +154,12 @@
         text-align: center;
         line-height: 60px;
         animation: loading 0.8s linear infinite;
+
         @keyframes loading {
           0% {
             transform: rotate(0)
           }
+
           100% {
             transform: rotate(365deg)
           }
