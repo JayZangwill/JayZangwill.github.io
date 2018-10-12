@@ -12,7 +12,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="links">
 				<ul class="nav navbar-nav">
-					<li v-for="link in links">
+					<li v-for="(link, i) in links" :key="i">
 						<router-link active-class="actived" :to="link.href">{{link.info}}</router-link>
 					</li>
 				</ul>
