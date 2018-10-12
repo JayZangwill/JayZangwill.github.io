@@ -1,5 +1,6 @@
 module.exports = {
   assetsDir: 'static/',
+  productionSourceMap: false,
   pages: {
     index: {
       entry: 'src/pages/index/index.js',
