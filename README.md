@@ -17,12 +17,12 @@
 
 ## 更新历史
 
-1. 1.*：用简单的html、css、javascript搭建的个人主页。
+1. v1.*：用简单的html、css、javascript搭建的个人主页。
 
-2. 2.*：引入了bootstrap和grunt
+2. v2.*：引入了bootstrap和grunt
 
-3. 3.*：引入了angular将grunt改为glup，并且主页搬迁到了腾讯云上
+3. v3.*：引入了angular将grunt改为glup，并且主页搬迁到了腾讯云上
 
-4. 4.*：将angular和gulp改为vue和webpack
+4. v4.*：将angular和gulp改为vue和webpack
 
-5. 5.*：升级vue-cli，全站https，腾讯云迁移阿里云，以及更全方位的优化
+5. v5.*：升级vue-cli，全站https，腾讯云迁移阿里云，以及更全方位的优化
