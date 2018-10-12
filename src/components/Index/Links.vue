@@ -1,7 +1,7 @@
 <template>
     <div class="links">
         <ul>
-            <li v-for="link in links">
+            <li v-for="(link,i) in links" :key="i">
                 <a :href="link.href" :title="link.title">{{link.info}}</a>
             </li>
         </ul>
@@ -14,11 +14,6 @@ export default {
     data() {
         return {
             links: [
-                {
-                    href: "resume.html",
-                    title: "我的简历",
-                    info: "resume"
-                },
                 {
                     href: "home.html",
                     title: "进入主页",
