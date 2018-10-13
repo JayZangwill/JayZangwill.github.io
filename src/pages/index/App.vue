@@ -20,6 +20,7 @@
     name: 'app',
     data() {
       return {
+		isIe: !!window.ActiveXObject || "ActiveXObject" in window || window.navigator.userAgent.indexOf("MSIE")>=1,
         loadEnd: false,
         nav: [{
           link: '/',

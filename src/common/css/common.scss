@@ -50,7 +50,9 @@ a {
 
 html,
 body {
-  height: 100%;
+  overflow-x: hidden;
+  height: 1px;
+  min-height: 100%;
   min-width: 320px;
   color: $white;
   font-family: arial, pingfang sc, stheiti, microsoft yahei, sans-serif;
