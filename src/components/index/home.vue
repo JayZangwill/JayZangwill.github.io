@@ -127,6 +127,7 @@
     }
 
     .article-wrap {
+      overflow: hidden;
       margin: 50px auto 0;
       padding: 5px 0 5px 10px;
       border-radius: 5px;
