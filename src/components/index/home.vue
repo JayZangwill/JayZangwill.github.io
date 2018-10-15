@@ -32,6 +32,14 @@
       this.$axios.get('/article').then(res => {
         this.articles = res.data.result
       })
+      // this.$axios.get('https://free-api.heweather.com/s6/weather/now', {
+      //   params: {
+      //     location: '北京',
+      //     key: '4b56b1e5ddd942f892a0baa4c13a3b01'
+      //   },
+      // }).then(res => {
+      //   console.log(res.data)
+      // })
     }
   }
 
