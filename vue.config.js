@@ -22,6 +22,13 @@ module.exports = {
       filename: 'noFound.html',
       title: 'noFound Page',
       chunks: ['chunk-vendors', 'chunk-common', 'noFound']
+    },
+    noSupport: {
+      entry: 'src/pages/noSupport/noSupport.js',
+      template: 'template.html',
+      filename: 'noSupport.html',
+      title: 'noSupport Page',
+      chunks: ['chunk-vendors', 'chunk-common', 'noSupport']
     }
   },
   devServer: {
