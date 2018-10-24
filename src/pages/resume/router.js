@@ -10,6 +10,7 @@ Vue.use(Router)
 export const router = new Router({
   routes: [{
     path: '/',
+    name: 'introduct',
     component: introduct,
   }, {
     path: '/experience',
@@ -20,5 +21,10 @@ export const router = new Router({
   }, {
     path: '/work',
     component: work
+  }, {
+    path: '*',
+    redirect: {
+      name: 'introduct'
+    }
   }]
 })

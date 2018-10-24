@@ -9,6 +9,7 @@ Vue.use(Router)
 export const router = new Router({
   routes: [{
     path: '/',
+    name: 'home',
     component: home,
   }, {
     path: '/about',
@@ -16,5 +17,10 @@ export const router = new Router({
   }, {
     path: '/say',
     component: say
+  }, {
+    path: '*',
+    redirect: {
+      name: 'home'
+    }
   }]
 })
