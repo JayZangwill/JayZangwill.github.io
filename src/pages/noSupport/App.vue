@@ -11,14 +11,20 @@
         </li>
         <li>
           <a href="https://www.sogou.com/web?query=firefox">
-            <img src="../../assets/img/firefox.png" alt="chrome">
+            <img src="../../assets/img/firefox.png" alt="firefox">
             <p>火狐浏览器</p>
           </a>
         </li>
         <li>
           <a href="https://www.sogou.com/web?query=搜狗浏览器">
-            <img src="../../assets/img/sogo.jpeg" alt="chrome">
+            <img src="../../assets/img/sogou.png" alt="sogou">
             <p>搜狗浏览器</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.sogou.com/web?query=qq览器">
+            <img src="../../assets/img/qq.png" alt="qq">
+            <p>qq浏览器</p>
           </a>
         </li>
       </ul>
