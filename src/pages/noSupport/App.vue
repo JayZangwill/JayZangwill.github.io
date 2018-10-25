@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <main>
-      <p class="explanation">没事别用ie浏览器，试试以下浏览器吧：</p>
+      <p class="explanation">没事别用ie浏览器，试试以下浏览器吧（双核浏览器需将浏览器模式切换到极速模式）：</p>
       <ul class="browser">
         <li>
           <a href="https://www.sogou.com/web?query=chrome">
