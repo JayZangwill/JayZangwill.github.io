@@ -88,8 +88,10 @@ export default {
     }
 
     img {
+      border: none;
       border-radius: 50%;
       width: 50px;
+      height: 50px;
       transition: transform 0.3s linear;
     }
 
