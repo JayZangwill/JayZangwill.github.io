@@ -2,7 +2,15 @@
   <transition name="fade">
     <main v-show="loadEnd" id="app">
       <my-nav :content="nav"></my-nav>
-      <a class="back-old" href="./old/">返回旧版</a>
+      <header>
+        <div class="weather">
+          <span>上海</span>
+          <span>晴</span>
+          <span>10℃</span>
+          <span>西北风</span>
+        </div>
+        <a class="back-old" href="./old/">返回旧版</a>
+      </header>
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
@@ -20,7 +28,7 @@
     name: 'app',
     data() {
       return {
-		isIe: !!window.ActiveXObject || "ActiveXObject" in window || window.navigator.userAgent.indexOf("MSIE")>=1,
+        isIe: !!window.ActiveXObject || "ActiveXObject" in window || window.navigator.userAgent.indexOf("MSIE") >= 1,
         loadEnd: false,
         nav: [{
           link: '/',
@@ -52,11 +60,24 @@
     box-sizing: border-box;
     background: url('../../assets/img/bg.jpg') no-repeat top center / cover;
 
-    .back-old {
-      float: right;
-      margin: 50px 30px 0 0;
-      color: $pureWhite;
+    header {
+      display: flex;
+      margin-top: 50px;
+      padding: 0 20px;
+      justify-content: space-between;
+
+      .weather {
+        span+span {
+          margin-left: 10px;
+        }
+      }
+
+      .back-old,
+      .weather {
+        color: $pureWhite;
+      }
     }
+
 
     footer {
       position: absolute;
