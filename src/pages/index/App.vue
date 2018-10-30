@@ -3,11 +3,11 @@
     <main v-show="loadEnd" id="app">
       <my-nav :content="nav"></my-nav>
       <header>
-        <div class="weather">
-          <span>上海</span>
-          <span>晴</span>
-          <span>10℃</span>
-          <span>西北风</span>
+        <div class="weather" v-if="weather">
+          <span>{{weather.basic.location}}</span>
+          <span>{{weather.now.cond_txt}}</span>
+          <span>{{weather.now.tmp}}℃</span>
+          <span>{{weather.now.wind_dir}}</span>
         </div>
         <a class="back-old" href="./old/">返回旧版</a>
       </header>
@@ -28,7 +28,6 @@
     name: 'app',
     data() {
       return {
-        isIe: !!window.ActiveXObject || "ActiveXObject" in window || window.navigator.userAgent.indexOf("MSIE") >= 1,
         loadEnd: false,
         nav: [{
           link: '/',
@@ -39,8 +38,20 @@
         }, {
           link: 'about',
           content: '&#xe659;<p>关于我</p>'
-        }]
+        }],
+        weather: ''
       }
+    },
+    created() {
+      this.$axios.get('https://free-api.heweather.com/s6/weather/now', {
+        params: {
+          location: 'auto_ip',
+          key: '4b56b1e5ddd942f892a0baa4c13a3b01'
+        },
+      }).then(res => {
+        console.log(res.data)
+        this.weather = res.data.HeWeather6[0];
+      })
     },
     components: {
       myNav
