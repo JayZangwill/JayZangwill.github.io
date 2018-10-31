@@ -23,92 +23,97 @@
 </template>
 
 <script>
-  import myNav from '@/common/components/nav'
-  export default {
-    name: 'app',
-    data() {
-      return {
-        loadEnd: false,
-        nav: [{
+import myNav from '@/common/components/nav';
+export default {
+  name: 'app',
+  data() {
+    return {
+      loadEnd: false,
+      nav: [
+        {
           link: '/',
           content: '&#xe60d;<p>首页</p>'
-        }, {
+        },
+        {
           link: 'say',
           content: '&#xe671;<p>留言板</p>'
-        }, {
+        },
+        {
           link: 'about',
           content: '&#xe659;<p>关于我</p>'
-        }],
-        weather: ''
-      }
-    },
-    created() {
-      this.$axios.get('https://free-api.heweather.com/s6/weather/now', {
+        }
+      ],
+      weather: ''
+    };
+  },
+  created() {
+    this.$axios
+      .get('https://free-api.heweather.com/s6/weather/now', {
         params: {
           location: 'auto_ip',
           key: '4b56b1e5ddd942f892a0baa4c13a3b01'
-        },
-      }).then(res => {
-        this.weather = res.data.HeWeather6[0];
+        }
       })
-      // this.$axios.get('/ip')
-    },
-    components: {
-      myNav
-    }
+      .then(res => {
+        this.weather = res.data.HeWeather6[0];
+      });
+    this.$axios.get('/ip').then(res => {
+      console.log(res.data);
+    });
+  },
+  components: {
+    myNav
   }
-
+};
 </script>
 
 <style lang="scss">
-  @import '../../common/css/colors.scss';
-  @import '../../common/css/common.scss';
+@import '../../common/css/colors.scss';
+@import '../../common/css/common.scss';
 
-  #app {
-    position: relative;
-    padding-bottom: 60px;
-    min-height: 100%;
-    box-sizing: border-box;
-    background: url('../../assets/img/bg.jpg') no-repeat top center / cover;
+#app {
+  position: relative;
+  padding-bottom: 60px;
+  min-height: 100%;
+  box-sizing: border-box;
+  background: url('../../assets/img/bg.jpg') no-repeat top center / cover;
 
-    header {
-      display: flex;
-      margin-top: 50px;
-      padding: 0 20px;
-      justify-content: space-between;
+  header {
+    display: flex;
+    margin-top: 50px;
+    padding: 0 20px;
+    justify-content: space-between;
 
-      .weather {
-        span+span {
-          margin-left: 10px;
-        }
-      }
-
-      .back-old,
-      .weather {
-        color: $pureWhite;
+    .weather {
+      span + span {
+        margin-left: 10px;
       }
     }
 
-
-    footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      line-height: 50px;
-
-      a:hover {
-        color: $pureWhite;
-      }
+    .back-old,
+    .weather {
+      color: $pureWhite;
     }
   }
 
-  .fade-enter-active {
-    transition: opacity 0.7s linear;
-  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
 
-  .fade-enter {
-    opacity: 0;
+    a:hover {
+      color: $pureWhite;
+    }
   }
+}
 
+.fade-enter-active {
+  transition: opacity 0.7s linear;
+}
+
+.fade-enter {
+  opacity: 0;
+}
 </style>
