@@ -49,9 +49,9 @@
           key: '4b56b1e5ddd942f892a0baa4c13a3b01'
         },
       }).then(res => {
-        console.log(res.data)
         this.weather = res.data.HeWeather6[0];
       })
+      // this.$axios.get('/ip')
     },
     components: {
       myNav
