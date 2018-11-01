@@ -15,6 +15,7 @@
         <router-view></router-view>
       </keep-alive>
       <footer>
+        <p class="visitors">自本站开启统计以来累计被访问<span>{{visits}}</span>次，您是第<span>{{num}}</span>个访客</p>
         <a href="http://www.miitbeian.gov.cn">桂ICP备16009800号</a>
       </footer>
       <img style="display:none" src="../../assets/img/bg.jpg" alt="bg" @load="loadEnd=true">
@@ -43,7 +44,9 @@ export default {
           content: '&#xe659;<p>关于我</p>'
         }
       ],
-      weather: ''
+      weather: '',
+      num: '',
+      visits: ''
     };
   },
   created() {
@@ -58,7 +61,9 @@ export default {
         this.weather = res.data.HeWeather6[0];
       });
     this.$axios.get('/ip').then(res => {
-      console.log(res.data);
+      const data = res.data.result;
+      this.num = data.num;
+      this.visits = data.visits;
     });
   },
   components: {
@@ -73,7 +78,7 @@ export default {
 
 #app {
   position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
   min-height: 100%;
   box-sizing: border-box;
   background: url('../../assets/img/bg.jpg') no-repeat top center / cover;
@@ -98,10 +103,20 @@ export default {
 
   footer {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     width: 100%;
     text-align: center;
-    line-height: 50px;
+    line-height: 30px;
+
+    p {
+      padding: 0 10px;
+      color: #fff;
+      span {
+        margin: 0 5px;
+        font-size: 25px;
+        color: #fd0042;
+      }
+    }
 
     a:hover {
       color: $pureWhite;
