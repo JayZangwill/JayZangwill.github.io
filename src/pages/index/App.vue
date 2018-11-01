@@ -15,7 +15,7 @@
         <router-view></router-view>
       </keep-alive>
       <footer>
-        <p class="visitors">自本站开启统计以来累计被访问<span>{{visits}}</span>次，您是第<span>{{num}}</span>个访客</p>
+        <p class="visitors">自本站开启统计以来累计被访问<span>{{visits}}</span>次，访客数<span>{{num}}</span>人次</p>
         <a href="http://www.miitbeian.gov.cn">桂ICP备16009800号</a>
       </footer>
       <img style="display:none" src="../../assets/img/bg.jpg" alt="bg" @load="loadEnd=true">
