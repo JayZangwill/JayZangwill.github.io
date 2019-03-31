@@ -39,9 +39,56 @@
     }
 
     .tip {
+      position: relative;
       font-size: 100px;
       color: $pureWhite;
       text-align: center;
+
+      &::before {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-49.5%);
+        clip: rect(0, 4000px, 0, 0);
+        animation: flash1 infinite linear 2s alternate-reverse;
+        text-shadow: -1px 0 rgba(blue, 0.5);
+        content: '\e603';
+
+        @keyframes flash1 {
+          @for $i from 0 through 20 {
+            #{percentage(($i * 5) / 100)} {
+              clip: rect(random(100)+px 4000px random(100)+px 0);
+            }
+          }
+        }
+
+        @media screen and (max-width: 1000px) {
+          width: 100%;
+          transform: translateX(-49.8%);
+        }
+      }
+
+      &::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50.5%);
+        clip: rect(0, 4000px, 0, 0);
+        animation: flash infinite linear 2s alternate-reverse;
+        text-shadow: -1px 0 rgba(red, 0.5);
+        content: '\e603';
+
+        @keyframes flash {
+          @for $i from 0 through 20 {
+            #{percentage(($i * 5) / 100)} {
+              clip: rect(random(100)+px 4000px random(100)+px 0);
+            }
+          }
+        }
+
+        @media screen and (max-width: 1000px) {
+          width: 100%;
+          transform: translateX(-50.2%);
+        }
+      }
     }
 
     .explanation {

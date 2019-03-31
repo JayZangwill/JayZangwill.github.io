@@ -5,7 +5,7 @@
         <img src="../../assets/img/touxiang.jpg" alt="avatar">
       </router-link>
     </div>
-    <h3>Jay Zangwill</h3>
+    <h3 data-text='Jay Zangwill'>Jay Zangwill</h3>
     <div class="links-wrap">
       <a target="_blank" class="iconfont" href="https://github.com/JayZangwill">&#xf1b4;</a>
       <a target="_blank" class="iconfont" href="https://jayzangwill.github.io/blog/">&#xe60e;</a>
@@ -32,14 +32,6 @@
       this.$axios.get('/article').then(res => {
         this.articles = res.data.result
       })
-      // this.$axios.get('https://free-api.heweather.com/s6/weather/now', {
-      //   params: {
-      //     location: '北京',
-      //     key: '4b56b1e5ddd942f892a0baa4c13a3b01'
-      //   },
-      // }).then(res => {
-      //   console.log(res.data)
-      // })
     }
   }
 
@@ -86,14 +78,57 @@
     }
 
     h3 {
+      position: relative;
       margin-top: 40px;
       color: $pureWhite;
-      font-size: 30px;
+      font-size: 40px;
       text-align: center;
       font-weight: normal;
 
-      @media screen and (max-width: 1000px) {
-        margin-top: 20px;
+      &::before {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-49.5%);
+        clip: rect(0, 4000px, 0, 0);
+        animation: flash1 infinite linear 2s alternate-reverse;
+        text-shadow: -1px 0 rgba(blue, 0.5);
+        content: attr(data-text);
+
+        @keyframes flash1 {
+          @for $i from 0 through 20 {
+            #{percentage(($i * 5) / 100)} {
+              clip: rect(random(100)+px 4000px random(50)+px 0);
+            }
+          }
+        }
+
+        @media screen and (max-width: 1000px) {
+          width: 100%;
+          transform: translateX(-49.8%);
+        }
+      }
+
+      &::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50.5%);
+        clip: rect(0, 4000px, 0, 0);
+        animation: flash infinite linear 2s alternate-reverse;
+        text-shadow: -1px 0 rgba(red, 0.5);
+        content: attr(data-text);
+
+        @keyframes flash {
+          @for $i from 0 through 20 {
+            #{percentage(($i * 5) / 100)} {
+              clip: rect(random(100)+px 4000px random(50)+px 0);
+            }
+          }
+        }
+
+        @media screen and (max-width: 1000px) {
+          width: 100%;
+          transform: translateX(-50.2%);
+        }
       }
     }
 
