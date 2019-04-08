@@ -50,16 +50,9 @@ export default {
     };
   },
   created() {
-    this.$axios
-      .get('https://free-api.heweather.com/s6/weather/now', {
-        params: {
-          location: 'auto_ip',
-          key: '4b56b1e5ddd942f892a0baa4c13a3b01'
-        }
-      })
-      .then(res => {
-        this.weather = res.data.HeWeather6[0];
-      });
+    this.$axios.get('/getWeather').then(res => {
+      this.weather = res.data.HeWeather6[0];
+    });
     this.$axios.get('/ip').then(res => {
       const data = res.data.result;
       this.num = data.num;
