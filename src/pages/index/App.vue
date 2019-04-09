@@ -53,7 +53,7 @@ export default {
     this.$axios.get('/getWeather').then(res => {
       this.weather = res.data.HeWeather6[0];
     });
-    this.$axios.get('/ip').then(res => {
+    this.$axios.post('/ip').then(res => {
       const data = res.data.result;
       this.num = data.num;
       this.visits = data.visits;
