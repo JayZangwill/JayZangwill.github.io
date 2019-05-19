@@ -33,6 +33,7 @@
       }
     },
     created() {
+      console.log('知道你对我耿耿于怀，想看我简历？试试 https://www.jayzangwill.cn/download')
       window.addEventListener('popstate', this.initRoute);
       this.initRoute();
     },
