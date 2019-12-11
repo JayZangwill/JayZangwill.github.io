@@ -1,24 +1,40 @@
 <template>
   <transition name="fade">
-    <main v-show="loadEnd" id="app">
-      <my-nav :content="nav"></my-nav>
+    <main
+      v-show="loadEnd"
+      id="app"
+    >
+      <my-nav :content="nav" />
       <header>
-        <div class="weather" v-if="weather">
-          <span>{{weather.basic.location}}</span>
-          <span>{{weather.now.cond_txt}}</span>
-          <span>{{weather.now.tmp}}℃</span>
-          <span>{{weather.now.wind_dir}}</span>
+        <div
+          v-if="weather"
+          class="weather"
+        >
+          <span>{{ weather.basic.location }}</span>
+          <span>{{ weather.now.cond_txt }}</span>
+          <span>{{ weather.now.tmp }}℃</span>
+          <span>{{ weather.now.wind_dir }}</span>
         </div>
-        <a class="back-old" href="./old/">返回旧版</a>
+        <a
+          class="back-old"
+          href="./old/"
+        >返回旧版</a>
       </header>
       <keep-alive>
-        <router-view></router-view>
+        <router-view />
       </keep-alive>
       <footer>
-        <p class="visitors">自本站开启统计以来累计被访问<span>{{visits}}</span>次，访客数<span>{{num}}</span>人次</p>
+        <p class="visitors">
+          自本站开启统计以来累计被访问<span>{{ visits }}</span>次，访客数<span>{{ num }}</span>人次
+        </p>
         <a href="http://www.miitbeian.gov.cn">桂ICP备16009800号</a>
       </footer>
-      <img style="display:none" src="../../assets/img/bg.jpg" alt="bg" @load="loadEnd=true">
+      <img
+        style="display:none"
+        src="../../assets/img/bg.jpg"
+        alt="bg"
+        @load="loadEnd=true"
+      >
     </main>
   </transition>
 </template>
@@ -26,7 +42,10 @@
 <script>
 import myNav from '@/common/components/nav';
 export default {
-  name: 'app',
+  name: 'App',
+  components: {
+    myNav
+  },
   data() {
     return {
       loadEnd: false,
@@ -54,13 +73,10 @@ export default {
       this.weather = res.data.HeWeather6[0];
     });
     this.$axios.post('/ip').then(res => {
-      const data = res.data.result;
+      const data = res.data;
       this.num = data.num;
       this.visits = data.visits;
     });
-  },
-  components: {
-    myNav
   }
 };
 </script>
