@@ -70,10 +70,10 @@ export default {
   },
   created() {
     this.$axios.get('/getWeather').then(res => {
-      this.weather = res.data.HeWeather6[0];
+      this.weather = res.HeWeather6[0];
     });
     this.$axios.post('/ip').then(res => {
-      const data = res.data;
+      const data = res;
       this.num = data.num;
       this.visits = data.visits;
     });
