@@ -7,6 +7,7 @@ const TerserJSPlugin = require ('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require ('optimize-css-assets-webpack-plugin');
 const VueLoaderPlugin = require ('vue-loader/lib/plugin');
 const glob = require ('glob');
+const CopyPlugin = require('copy-webpack-plugin');
 const {entries: entry, names} = getEntries (
   `${__dirname}/src/pages/**/index.js`
 );
@@ -34,9 +35,11 @@ function getEntries (path) {
 
 module.exports = ({production}) => {
   const htmlWebpackPluginOption = names.map (item => {
-
     return new HtmlWebpackPlugin ({
-      template: path.resolve (__dirname, `${production ? 'index' : 'dev'}.html`),
+      template: path.resolve (
+        __dirname,
+        `${production ? 'index' : 'dev'}.html`
+      ),
       filename: `${item}.html`,
       chunks: ['vendor', item],
       vendortUrl: './js/vendor.js',
@@ -149,20 +152,11 @@ module.exports = ({production}) => {
         },
       ],
     },
-    plugins: [new VueLoaderPlugin (), ...htmlWebpackPluginOption],
-    // optimization: {
-    //   splitChunks: {
-    //     cacheGroups: {
-    //       vendor: {
-    //         test: /node_modules/,
-    //         chunks: 'initial',
-    //         name: 'vendor',
-    //         // 设置优先级，防止和自定义的公共代码提取时被覆盖，不进行打包
-    //         priority: 10,
-    //       },
-    //     },
-    //   },
-    // },
+    plugins: [
+      new VueLoaderPlugin (),
+      new CopyPlugin ([{from: path.resolve (__dirname, 'public'), to: path.resolve (__dirname, 'dist')}]),
+      ...htmlWebpackPluginOption,
+    ],
   };
 
   // 开发环境
