@@ -6,6 +6,9 @@ import {
 } from './router'
 
 Vue.config.productionTip = false
+
+axios.interceptors.response.use(({data}) => data.status === 200 ? Promise.resolve(data.result) : Promise.reject(data.message))
+
 Vue.prototype.$axios = axios
 
 new Vue({

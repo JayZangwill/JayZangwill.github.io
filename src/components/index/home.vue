@@ -1,36 +1,68 @@
 <template>
   <div class="home">
     <div class="avatar-wrap">
-      <router-link to="/" class="avatar">
-        <img src="../../assets/img/touxiang.jpg" alt="avatar">
+      <router-link
+        to="/"
+        class="avatar"
+      >
+        <img
+          src="../../assets/img/touxiang.jpg"
+          alt="avatar"
+        >
       </router-link>
     </div>
-    <h3 data-text='Jay Zangwill'>Jay Zangwill</h3>
+    <h3 data-text="Jay Zangwill">
+      Jay Zangwill
+    </h3>
     <div class="links-wrap">
-      <a target="_blank" class="iconfont" href="https://github.com/JayZangwill">&#xf1b4;</a>
-      <a target="_blank" class="iconfont" href="https://jayzangwill.github.io/blog/">&#xe60e;</a>
-      <a class="iconfont" href="resume.html">&#xe601;</a>
+      <a
+        target="_blank"
+        class="iconfont"
+        href="https://github.com/JayZangwill"
+      >&#xf1b4;</a>
+      <a
+        target="_blank"
+        class="iconfont"
+        href="https://jayzangwill.github.io/blog/"
+      >&#xe60e;</a>
+      <a
+        class="iconfont"
+        href="resume.html"
+      >&#xe601;</a>
     </div>
     <ul class="article-wrap">
       <template v-if="articles.length">
-        <li v-for="(item, i) in articles" :key="i"><a :href="item.href">{{item.title}}</a><time>{{item.time}}</time></li>
+        <li
+          v-for="(item, i) in articles"
+          :key="i"
+        >
+          <a :href="item.href">{{ item.title }}</a><time>{{ item.time }}</time>
+        </li>
       </template>
-      <li v-else class="iconfont loading">&#xe623;</li>
+      <li
+        v-else
+        class="iconfont loading"
+      >
+        &#xe623;
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'home',
+    name: 'Home',
     data() {
       return {
         articles: []
       }
     },
     created() {
+      this.articles = JSON.parse(localStorage.getItem('www.jayzangwill.cn')) || []
+
       this.$axios.get('/article').then(res => {
-        this.articles = res.data.result
+        localStorage.setItem('www.jayzangwill.cn', JSON.stringify(res))
+        this.articles = res
       })
     }
   }

@@ -51,6 +51,7 @@ a {
 html,
 body {
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   height: 1px;
   min-height: 100%;
   min-width: 320px;
