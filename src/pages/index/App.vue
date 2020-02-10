@@ -15,10 +15,6 @@
           <span>{{ weather.now.tmp }}℃</span>
           <span>{{ weather.now.wind_dir }}</span>
         </div>
-        <a
-          class="back-old"
-          href="./old/"
-        >返回旧版</a>
       </header>
       <keep-alive>
         <router-view />
@@ -104,7 +100,6 @@ export default {
       }
     }
 
-    .back-old,
     .weather {
       color: $pureWhite;
     }
