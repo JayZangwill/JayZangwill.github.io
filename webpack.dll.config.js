@@ -3,6 +3,7 @@ const webpack = require ('webpack');
 const {CleanWebpackPlugin} = require ('clean-webpack-plugin');
 const TerserJSPlugin = require ('terser-webpack-plugin');
 module.exports = {
+  mode: 'production',
   entry: {
     vendor: [
       'vue',
@@ -12,8 +13,8 @@ module.exports = {
   },
   output: {
     path: path.resolve ('./dist'),
-    filename: 'js/vendor.js',
-    library: '[name]_library',
+    filename: 'js/[name].[chunkhash].js',
+    library: '[name]_library_[chunkhash]',
   },
   optimization: {
     minimizer: [
@@ -26,8 +27,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin (),
     new webpack.DllPlugin ({
-      path: path.resolve ('./dist', 'vendor-manifest.json'),
-      name: '[name]_library',
+      path: path.join (__dirname,'./dist', '[name]-manifest.json'),
+      name: '[name]_library_[chunkhash]',
     }),
   ],
 };

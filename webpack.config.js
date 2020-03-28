@@ -41,8 +41,7 @@ module.exports = ({production}) => {
         `${production ? 'index' : 'dev'}.html`
       ),
       filename: `${item}.html`,
-      chunks: ['vendor', item],
-      vendortUrl: './js/vendor.js',
+      chunks: [item],
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -203,9 +202,6 @@ module.exports = ({production}) => {
       ],
     },
     plugins: [
-      new webpack.DllReferencePlugin ({
-        manifest: require ('./dist/vendor-manifest.json'),
-      }),
       new MiniCssExtractPlugin ({
         publicPath: '/',
         filename: 'css/[name].[contenthash:8].css',
@@ -233,6 +229,13 @@ module.exports = ({production}) => {
       ],
     },
   };
+
+  if (production) {
+    prod.plugins.push(new webpack.DllReferencePlugin ({
+      context: __dirname,
+      manifest: require ('./dist/vendor-manifest.json'),
+    }))
+  }
 
   return merge (common, production ? prod : dev);
 };
