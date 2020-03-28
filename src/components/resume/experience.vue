@@ -9,17 +9,26 @@
     </div>
     <div class="list">
       <h4>上海鱼泡泡信息科技有限公司前端开发工程师</h4>
-      <time>2018年5月~今</time>
-      <p>完成了：<a href="https://www.yitantech.cn/">比心</a>、鱼耳各类活动页、<a href="javascript:;">比心小程序<img src="../../assets/img/bixin.jpg"
-            alt="bixin qr code"></a>等</p>
+      <time>2018年5月~2020.2月</time>
+      <p>
+        完成了：<a href="https://bxapp.cn/">比心</a>、鱼耳各类活动页、<a href="javascript:;">比心小程序<img
+          src="../../assets/img/bixin.jpg"
+          alt="bixin qr code"
+        ></a>等
+      </p>
       <p>相关技术：scss，js，vue等</p>
+    </div>
+    <div class="list">
+      <h4>掌门一对一</h4>
+      <time>2020.2~今</time>
+      <p>萌新驾到</p>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'experience'
+    name: 'Experience'
   }
 
 </script>

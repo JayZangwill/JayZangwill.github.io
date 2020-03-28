@@ -1,27 +1,59 @@
 <template>
   <transition name="end">
-    <main v-show="loadEnd" id="app">
+    <main
+      v-show="loadEnd"
+      id="app"
+    >
       <div class="avatar-wrap">
-        <router-link to="/" class="avatar">
-          <img src="../../assets/img/touxiang.jpg" alt="avatar">
-        </router-link>
+        <a
+          href="/"
+          class="avatar"
+        >
+          <img
+            src="../../assets/img/touxiang.jpg"
+            alt="avatar"
+          >
+        </a>
         <transition name="fade">
-          <p v-if="show" class="tip">主人说现在暂时还不想找工作，所以我不让你下载主人的简历！</p>
+          <p
+            v-if="show"
+            class="tip"
+          >
+            主人说现在暂时还不想找工作，所以我不让你下载主人的简历！
+          </p>
         </transition>
       </div>
       <transition :name="direction">
-        <router-view class="main" @show="open"></router-view>
+        <router-view
+          class="main"
+          @show="open"
+        />
       </transition>
-      <a v-show="pre.length" href="javascript:;" class="iconfont pre-page" @click="toPre">&#xe617;</a>
-      <a v-show="next.length" href="javascript:;" class="iconfont next-page" @click="toNext">&#xe617;</a>
-      <img style="display:none" src="../../assets/img/bg.jpg" alt="bg" @load="loadEnd=true">
+      <a
+        v-show="pre.length"
+        href="javascript:;"
+        class="iconfont pre-page"
+        @click="toPre"
+      >&#xe617;</a>
+      <a
+        v-show="next.length"
+        href="javascript:;"
+        class="iconfont next-page"
+        @click="toNext"
+      >&#xe617;</a>
+      <img
+        style="display:none"
+        src="../../assets/img/bg.jpg"
+        alt="bg"
+        @load="loadEnd=true"
+      >
     </main>
   </transition>
 </template>
 
 <script>
   export default {
-    name: 'app',
+    name: 'App',
     data() {
       return {
         show: false,
@@ -133,7 +165,7 @@
         border-radius: 30px 30px 0;
         width: 160px;
         color: #000;
-        background: rgba($pureWhite, 0.8);
+        background: $pureWhite;
         transition: all 0.3s linear;
 
         @media screen and (min-width: 1000px) {

@@ -1,16 +1,30 @@
 <template>
   <nav>
-    <div class="link-wrap" :class="{show:isShow}">
-      <router-link v-for="(item,i) in content" :to="item.link" class="iconfont link" active-class="actived" :key="i"
-        v-html="item.content"></router-link>
+    <div
+      class="link-wrap"
+      :class="{show:isShow}"
+    >
+      <router-link
+        v-for="(item,i) in content"
+        :key="i"
+        :to="item.link"
+        class="iconfont link"
+        active-class="actived"
+        v-html="item.content"
+      />
     </div>
-    <a href="javascript:;" class="iconfont control" :class="{hide:isShow}" @click="toggle">&#xe617;</a>
+    <a
+      href="javascript:;"
+      class="iconfont control"
+      :class="{hide:isShow}"
+      @click="toggle"
+    >&#xe617;</a>
   </nav>
 </template>
 
 <script>
   export default {
-    name: 'myNav',
+    name: 'MyNav',
     props: ['content'],
     data() {
       return {
@@ -30,9 +44,10 @@
   @import '../../common/css/colors.scss';
 
   nav {
-    position: relative;
+    position: absolute;
+    width: 100%;
     box-sizing: border-box;
-    background: #000;
+    background: rgba(#000, 0.5);
     font-size: 0;
     text-align: center;
 

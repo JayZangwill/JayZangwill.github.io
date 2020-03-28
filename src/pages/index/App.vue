@@ -90,8 +90,7 @@ export default {
 
   header {
     display: flex;
-    margin-top: 50px;
-    padding: 0 20px;
+    padding: 50px 20px 0;
     justify-content: space-between;
 
     .weather {
