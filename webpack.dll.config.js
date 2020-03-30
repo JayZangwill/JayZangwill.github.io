@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve ('./dist'),
     filename: 'js/[name].[chunkhash].js',
-    library: '[name]_library_[chunkhash]',
+    library: '[name]_[chunkhash]',
   },
   optimization: {
     minimizer: [
@@ -28,7 +28,7 @@ module.exports = {
     new CleanWebpackPlugin (),
     new webpack.DllPlugin ({
       path: path.join (__dirname,'./dist', '[name]-manifest.json'),
-      name: '[name]_library_[chunkhash]',
+      name: '[name]_[chunkhash]',
     }),
   ],
 };

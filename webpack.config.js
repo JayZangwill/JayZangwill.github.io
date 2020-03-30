@@ -1,4 +1,5 @@
 const path = require ('path');
+const fs = require('fs')
 const webpack = require ('webpack');
 const merge = require ('webpack-merge');
 const HtmlWebpackPlugin = require ('html-webpack-plugin');
@@ -206,6 +207,20 @@ module.exports = ({production}) => {
         publicPath: '/',
         filename: 'css/[name].[contenthash:8].css',
       }),
+      {
+        apply(compiler) {
+          compiler.hooks.done.tap('rewritePath', (stats) => {
+            const  vendorJson = fs.readFileSync(path.resolve(stats.compilation.outputOptions.path, 'vendor-manifest.json'), 'utf-8')
+            const vendorPath = `/js/${(JSON.parse(vendorJson).name).replace('_', '.')}.js`
+
+            glob.sync(path.resolve(stats.compilation.outputOptions.path, '*.html')).forEach(item => {
+              const htmlStr = fs.readFileSync(item, 'utf-8')
+
+              fs.writeFileSync(item, htmlStr.replace('%placeholder%', vendorPath))
+            })
+          });
+        }
+      }
     ],
     optimization: {
       namedChunks: true,
