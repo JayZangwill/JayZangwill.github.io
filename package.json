@@ -10,9 +10,7 @@
     "dev": "webpack-dev-server --env.development",
     "build": "webpack --env.production",
     "build-dll": "webpack --config webpack.dll.config.js --env.production",
-    "release": "npm run build-dll && npm run build",
-    "build:server": "npm run release && npm run server",
-    "server": "http-server ./dist -o",
+    "release": "npm run build-dll && npm run build && node upload",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
@@ -45,6 +43,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
+    "ssh2-sftp-client": "^5.1.2",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.3.0",
     "url-loader": "^2.0.0",
