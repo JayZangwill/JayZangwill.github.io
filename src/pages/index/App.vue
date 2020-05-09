@@ -23,7 +23,7 @@
         <p class="visitors">
           自本站开启统计以来累计被访问<span>{{ visits }}</span>次，访客数<span>{{ num }}</span>人次
         </p>
-        <a href="http://www.miitbeian.gov.cn">桂ICP备16009800号</a>
+        <a href="http://www.beian.miit.gov.cn">桂ICP备16009800号</a>
       </footer>
       <img
         style="display:none"

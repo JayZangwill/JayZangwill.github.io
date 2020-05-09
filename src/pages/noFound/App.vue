@@ -5,7 +5,7 @@
       <p class="explanation">啊哦，是404耶，请尝试访问这个链接吧<a href="https://www.jayzangwill.cn/">https://www.jayzangwill.cn</a></p>
     </main>
     <footer>
-      <a href="http://www.miitbeian.gov.cn">桂ICP备16009800号</a>
+      <a href="http://www.beian.miit.gov.cn">桂ICP备16009800号</a>
     </footer>
   </div>
 </template>
