@@ -6,7 +6,6 @@
   "repository": "git@github.com:JayZangwill/JayZangwill.github.io.git",
   "author": "Jay Zangwill <359390851@qq.com>",
   "license": "MIT",
-  "sideEffects": false,
   "scripts": {
     "dev": "webpack-dev-server --env.development",
     "build": "npm run build-dll && webpack --env.production",
