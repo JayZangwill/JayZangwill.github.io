@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import introduct from '@/components/resume/introduct.vue'
-import experience from '@/components/resume/experience.vue'
-import skills from '@/components/resume/skills.vue'
-import work from '@/components/resume/work.vue'
+import introduct from '@/components/resume/introduct';
 
 Vue.use(Router)
 
@@ -14,13 +11,25 @@ export const router = new Router({
     component: introduct,
   }, {
     path: '/experience',
-    component: experience,
+    component: () => import(
+     /* webpackPrefetch: true */
+     /* webpackChunkName: "experience" */
+    '@/components/resume/experience.vue'
+  ),
   }, {
     path: '/skills',
-    component: skills
+    component: () => import(
+      /* webpackPrefetch: true */
+      /* webpackChunkName: "skill" */
+     '@/components/resume/skills.vue'
+    ),
   }, {
     path: '/work',
-    component: work
+    component: () => import(
+       /* webpackPrefetch: true */
+       /* webpackChunkName: "work" */
+      '@/components/resume/work.vue'
+    ),
   }, {
     path: '*',
     redirect: {

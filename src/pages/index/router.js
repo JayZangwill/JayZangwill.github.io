@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '@/components/index/home.vue'
-import about from '@/components/index/about.vue'
-import say from '@/components/index/say.vue'
+import home from '@/components/index/home.vue';
 
 Vue.use(Router)
 
@@ -13,10 +11,18 @@ export const router = new Router({
     component: home,
   }, {
     path: '/about',
-    component: about,
+    component: () => import(
+      /* webpackPrefetch: true */
+      /* webpackChunkName: "about" */
+      '@/components/index/about.vue'
+    ),
   }, {
     path: '/say',
-    component: say
+    component: () => import(
+      /* webpackPrefetch: true */
+      /* webpackChunkName: "say" */
+      '@/components/index/say.vue'
+    )
   }, {
     path: '*',
     redirect: {
