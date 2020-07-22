@@ -21,7 +21,13 @@
       </keep-alive>
       <footer>
         <p class="visitors">
-          自本站开启统计以来累计被访问<span>{{ visits }}</span>次，访客数<span>{{ num }}</span>人次
+          ©2015-2020 jayzangwill.cn自本站开启统计以来累计被访问
+          <span>{{ visits }}</span>次，访客数
+          <span>{{ num }}</span>人次
+        </p>
+        <p class="friends">
+          <span>友情链接</span>：
+          <a href="https://kalasearch.cn">卡拉搜索</a>
         </p>
         <a href="http://www.beian.miit.gov.cn">桂ICP备16009800号</a>
       </footer>
@@ -36,9 +42,9 @@
 </template>
 
 <script>
-import myNav from '@/common/components/nav';
+import myNav from "@/common/components/nav";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     myNav
   },
@@ -47,28 +53,28 @@ export default {
       loadEnd: false,
       nav: [
         {
-          link: '/',
-          content: '&#xe60d;<p>首页</p>'
+          link: "/",
+          content: "&#xe60d;<p>首页</p>"
         },
         {
-          link: 'say',
-          content: '&#xe671;<p>留言板</p>'
+          link: "say",
+          content: "&#xe671;<p>留言板</p>"
         },
         {
-          link: 'about',
-          content: '&#xe659;<p>关于我</p>'
+          link: "about",
+          content: "&#xe659;<p>关于我</p>"
         }
       ],
-      weather: '',
-      num: '',
-      visits: ''
+      weather: "",
+      num: "",
+      visits: ""
     };
   },
   created() {
-    this.$axios.get('/getWeather').then(res => {
+    this.$axios.get("/getWeather").then(res => {
       this.weather = res.HeWeather6[0];
     });
-    this.$axios.post('/ip').then(res => {
+    this.$axios.post("/ip").then(res => {
       const data = res;
       this.num = data.num;
       this.visits = data.visits;
@@ -78,15 +84,15 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../common/css/colors.scss';
-@import '../../common/css/common.scss';
+@import "../../common/css/colors.scss";
+@import "../../common/css/common.scss";
 
 #app {
   position: relative;
   padding-bottom: 120px;
   min-height: 100%;
   box-sizing: border-box;
-  background: url('../../assets/img/bg.jpg') no-repeat top center / cover;
+  background: url("../../assets/img/bg.jpg") no-repeat top center / cover;
 
   header {
     display: flex;
@@ -110,19 +116,25 @@ export default {
     width: 100%;
     text-align: center;
     line-height: 30px;
+  }
 
-    p {
-      padding: 0 10px;
-      color: #fff;
-      span {
-        margin: 0 5px;
-        font-size: 25px;
-        color: #fd0042;
-      }
+  .visitors {
+    padding: 0 10px;
+    color: #eee;
+    span {
+      margin: 0 5px;
+      font-size: 25px;
+      color: #fd0042;
     }
+  }
 
-    a:hover {
-      color: $pureWhite;
+  a:hover {
+    color: $pureWhite;
+  }
+  .friends {
+    font-size: 14px;
+    span {
+      color: #fff;
     }
   }
 }

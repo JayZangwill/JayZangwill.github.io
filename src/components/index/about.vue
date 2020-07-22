@@ -6,16 +6,20 @@
     <p>话不多，爱发骚，骚起来就没你什么事的那种。</p>
     <p>常用昵称Jay Zangwill行走于各大网站；<a href="https://www.jayzangwill.cn/">Jay Zangwill</a>唯一指定官方网站！</p>
     <p>座右铭：一张坏坏的笑脸，连两道浓浓的眉毛也泛起柔柔的涟漪，一副放荡不羁的笑意，色而不淫的页面设计，风流而不下流的代码风格，帅气中又带着一抹温柔专注的半仙。</p>
+    <p>可以通过<a href="mailto:359390851@qq.com">359390851@qq.com</a>联系到我</p>
     <p>额，好像没什么说的了，没事就用微信扫扫下面二维码吧</p>
     <div class="qr-code">
-      <img src="../../assets/img/qr_code.jpg" alt="pay for me">
+      <img
+        src="../../assets/img/qr_code.jpg"
+        alt="pay for me"
+      >
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'about'
+    name: 'About'
   }
 
 </script>
