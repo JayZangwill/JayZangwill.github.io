@@ -21,13 +21,16 @@
       </keep-alive>
       <footer>
         <p class="visitors">
-          ©2015-2020 jayzangwill.cn自本站开启统计以来累计被访问
+          自本站开启统计以来累计被访问
           <span>{{ visits }}</span>次，访客数
           <span>{{ num }}</span>人次
         </p>
         <p class="friends">
           <span>友情链接</span>：
           <a href="https://kalasearch.cn">卡拉搜索</a>
+        </p>
+        <p class="copyright">
+          ©2015-2020 jayzangwill.cn
         </p>
         <a href="http://www.beian.miit.gov.cn">桂ICP备16009800号</a>
       </footer>
@@ -89,7 +92,7 @@ export default {
 
 #app {
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 200px;
   min-height: 100%;
   box-sizing: border-box;
   background: url("../../assets/img/bg.jpg") no-repeat top center / cover;
