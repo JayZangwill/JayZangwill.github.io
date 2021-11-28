@@ -1,7 +1,5 @@
 # 这是我的个人主页
 
-[在线地址](https://www.jayzangwill.cn/)
-
      //运行 npm run serve
      //打包 npm run build
     
